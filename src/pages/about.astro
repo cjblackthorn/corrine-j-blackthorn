@@ -1,0 +1,19 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import { assets } from '../data/assets';
+---
+<MainLayout title="About | Corrine J Blackthorn">
+  <section>
+    <div class="container split">
+      <div class="portrait-frame"><img src={assets.portraits[1]} alt="Corrine J Blackthorn portrait" /></div>
+      <div>
+        <span class="kicker">My Story</span>
+        <h1>Compassion, resilience, and radical honesty.</h1>
+        <p>My grandmother modeled compassion. Life taught me resilience. Together, those lessons shaped the person I became.</p>
+        <p>I am a technologist, creator, advocate, photographer, writer, musician, baker, and founder. I have rebuilt myself more than once, and I try to use what I have learned to help others feel less alone.</p>
+      </div>
+    </div>
+  </section>
+  <section class="quote-band"><div class="container"><blockquote>I want people to feel seen, inspired, and curious.</blockquote></div></section>
+  <section><div class="container"><div class="section-heading"><span class="kicker">Values</span><h2>What guides the work.</h2><p>Compassion. Curiosity. Honesty. Access. Community. Creative expression. Practical support.</p></div><div class="grid"><article class="card"><h3>Seen</h3><p>I care about the people who are overlooked, discarded, misunderstood, or pushed to the margins.</p></article><article class="card"><h3>Inspired</h3><p>I believe stories, images, music, food, and technology can help people imagine something better.</p></article><article class="card"><h3>Curious</h3><p>Curiosity keeps us learning, growing, rebuilding, and finding new paths forward.</p></article></div></div></section>
+</MainLayout>
