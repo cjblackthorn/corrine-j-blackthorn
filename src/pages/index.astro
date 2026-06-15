@@ -2,7 +2,70 @@
 import MainLayout from '../layouts/MainLayout.astro';
 import Hero from '../components/Hero.astro';
 import { assets } from '../data/assets';
+import { links, ventureCards } from '../data/links';
 ---
 <MainLayout title="Corrine J Blackthorn">
   <Hero image={assets.hero} />
+
+  <section>
+    <div class="container split">
+      <div class="portrait-frame">
+        <img src={assets.portraits[0]} alt="Corrine J Blackthorn" />
+      </div>
+      <div>
+        <span class="kicker">About Corrine</span>
+        <h2>Technology, creativity, and compassion.</h2>
+        <p>I build systems, create art, tell stories, and cultivate spaces where people can grow.</p>
+        <p>This site is the personal hub for my technology work, photography, writing, music, advocacy, baking, and the wider Blackthorn ecosystem.</p>
+        <a class="button" href="/about/">Read my story</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="quote-band">
+    <div class="container">
+      <blockquote>Helping people feel seen, inspired, and curious.</blockquote>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-heading">
+        <span class="kicker">Explore</span>
+        <h2>What I build and create.</h2>
+        <p>Different forms of work, one connected ecosystem.</p>
+      </div>
+      <div class="grid">
+        <article class="card"><h3>Technology</h3><p>Identity, security, governance, consulting, and practical problem solving.</p><a class="button" href="/technology/">Explore</a></article>
+        <article class="card"><h3>Photography</h3><p>Quiet moments, changing light, food, people, nature, and visual storytelling.</p><a class="button" href="/photography/">View</a></article>
+        <article class="card"><h3>Writing</h3><p>Essays, memoir, field notes, reflections, and future book releases.</p><a class="button" href="/writing/">Read</a></article>
+        <article class="card"><h3>Music</h3><p>Glass & Thorns is my artist project for music and creative expression.</p><a class="button" href={links.music.spotify}>Listen</a></article>
+        <article class="card"><h3>Advocacy</h3><p>Community-centered work for access, dignity, and support.</p><a class="button" href="/advocacy/">Learn</a></article>
+        <article class="card"><h3>Ventures</h3><p>The wider Blackthorn ecosystem of businesses, projects, and creative work.</p><a class="button" href="/ventures/">Explore</a></article>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-heading">
+        <span class="kicker">Photography</span>
+        <h2>A glimpse through the lens.</h2>
+        <p>Featured work from Petal & Frame Photography.</p>
+      </div>
+      <div class="gallery">
+        {assets.photography.slice(0, 6).map((src) => <figure><img src={src} alt="Photography by Corrine J Blackthorn" loading="lazy" /></figure>)}
+      </div>
+      <p style="margin-top: 24px"><a class="button" href={links.ventures.petalAndFrame}>Visit Petal & Frame</a></p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-heading"><span class="kicker">Ventures</span><h2>Connected work. Different doors.</h2><p>Each venture has its own purpose and audience.</p></div>
+      <div class="link-list">
+        {ventureCards.map((venture) => <a class="link-card" href={venture.href}><h3>{venture.title}</h3><p>{venture.description}</p></a>)}
+      </div>
+    </div>
+  </section>
 </MainLayout>
