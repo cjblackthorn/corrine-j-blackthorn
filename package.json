@@ -1,0 +1,1 @@
+{"scripts":{"dev":"astro dev","build":"astro build","preview":"astro preview","watermark":"node tools/watermark-images.mjs"},"dependencies":{"@astrojs/mdx":"latest","astro":"latest","sharp":"latest"},"devDependencies":{}}
