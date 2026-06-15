@@ -1,0 +1,17 @@
+---
+const title = Astro.props.title ?? 'Corrine J Blackthorn';
+const kicker = Astro.props.kicker ?? 'Technologist • Creator • Advocate';
+const description = Astro.props.description ?? 'Helping people feel seen, inspired, and curious through technology, creativity, and community.';
+const image = Astro.props.image ?? '/images/hero/lake-sunset.jpg';
+---
+<section class="hero" style={`--hero-image: url(${image})`}>
+  <div class="hero-content">
+    <span class="kicker">{kicker}</span>
+    <h1>{title}</h1>
+    <p>{description}</p>
+    <div class="hero-actions">
+      <a class="button dark" href="/about/">Start with my story</a>
+      <a class="button" href="/ventures/">Explore the ecosystem</a>
+    </div>
+  </div>
+</section>
