@@ -1,0 +1,19 @@
+---
+import { links } from '../data/links';
+const year = new Date().getFullYear();
+---
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <strong>Corrine J Blackthorn</strong>
+      <p>Technologist • Creator • Advocate</p>
+      <p>© {year} Corrine J Blackthorn. All rights reserved.</p>
+    </div>
+    <div class="nav-links">
+      <a href={links.personal.linkedin}>LinkedIn</a>
+      <a href={links.personal.github}>GitHub</a>
+      <a href={links.music.spotify}>Spotify</a>
+      <a href={links.ventures.blackthornEnterprises}>Blackthorn Enterprises</a>
+    </div>
+  </div>
+</footer>
