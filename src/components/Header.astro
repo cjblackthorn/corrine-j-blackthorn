@@ -1,0 +1,24 @@
+---
+import { links } from '../data/links';
+
+const navItems = [
+  { label: 'About', href: '/about/' },
+  { label: 'Technology', href: '/technology/' },
+  { label: 'Photography', href: '/photography/' },
+  { label: 'Writing', href: '/writing/' },
+  { label: 'Advocacy', href: '/advocacy/' },
+];
+---
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="/" aria-label="Corrine J Blackthorn home">
+      <span>Corrine J Blackthorn</span>
+      <span>Technologist • Creator • Advocate</span>
+    </a>
+    <nav class="nav-links" aria-label="Main navigation">
+      {navItems.map((item) => <a href={item.href}>{item.label}</a>)}
+      <a href="/ventures/">Ventures</a>
+      <a class="button" href={links.ventures.blackthornEnterprises}>Blackthorn Enterprises</a>
+    </nav>
+  </div>
+</header>
