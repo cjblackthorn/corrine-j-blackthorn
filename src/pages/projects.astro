@@ -1,0 +1,25 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import { links } from '../data/links';
+---
+<MainLayout title="Projects | Corrine J Blackthorn">
+<section>
+<div class="container">
+<div class="section-heading">
+<span class="kicker">Projects</span>
+<h1>Things I'm building.</h1>
+<p>These are the projects, businesses, creative endeavors, and initiatives that make up different parts of my work and interests.</p>
+</div>
+<div class="grid">
+<article class="card"><h3>TechNerd</h3><p>Technology consulting, engineering, security, and technical solutions.</p><a class="button" href={links.ventures.techNerd}>Visit</a></article>
+<article class="card"><h3>Rootworks</h3><p>Learning, experimentation, infrastructure, and technical exploration.</p><a class="button" href={links.ventures.rootworks}>Visit</a></article>
+<article class="card"><h3>Blackthorn Field Notes</h3><p>Essays, reflections, technical writing, and future publications.</p><a class="button" href={links.ventures.blackthornFieldNotes}>Visit</a></article>
+<article class="card"><h3>Glass & Thorns</h3><p>Music, art, and creative expression.</p><a class="button" href={links.ventures.glassAndThorns}>Visit</a></article>
+<article class="card"><h3>Petals & Frames</h3><p>Photography, visual storytelling, and creative work.</p><a class="button" href={links.ventures.petalAndFrame}>Visit</a></article>
+<article class="card"><h3>Blackthorn's Tropicals</h3><p>A growing collection of plants, learning, and cultivation.</p><a class="button" href={links.ventures.blackthornsTropicals}>Visit</a></article>
+<article class="card"><h3>Thorns to Roses</h3><p>Advocacy, support, coaching, and transformation.</p><a class="button" href={links.ventures.thornsToRoses}>Visit</a></article>
+</div>
+</div>
+</section>
+<section class="quote-band"><div class="container"><blockquote>Blackthorn Enterprises is the business umbrella that helps organize several of these projects. Most people interact with the individual projects directly.</blockquote></div></section>
+</MainLayout>
