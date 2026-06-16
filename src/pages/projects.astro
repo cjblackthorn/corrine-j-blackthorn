@@ -3,23 +3,64 @@ import MainLayout from '../layouts/MainLayout.astro';
 import { links } from '../data/links';
 ---
 <MainLayout title="Projects | Corrine J Blackthorn">
-<section>
-<div class="container">
-<div class="section-heading">
-<span class="kicker">Projects</span>
-<h1>Things I'm building.</h1>
-<p>These are the projects, businesses, creative endeavors, and initiatives that make up different parts of my work and interests.</p>
-</div>
-<div class="grid">
-<article class="card"><h3>TechNerd</h3><p>Technology consulting, engineering, security, and technical solutions.</p><a class="button" href={links.ventures.techNerd}>Visit</a></article>
-<article class="card"><h3>Rootworks</h3><p>Learning, experimentation, infrastructure, and technical exploration.</p><a class="button" href={links.ventures.rootworks}>Visit</a></article>
-<article class="card"><h3>Blackthorn Field Notes</h3><p>Essays, reflections, technical writing, and future publications.</p><a class="button" href={links.ventures.blackthornFieldNotes}>Visit</a></article>
-<article class="card"><h3>Glass & Thorns</h3><p>Music, art, and creative expression.</p><a class="button" href={links.ventures.glassAndThorns}>Visit</a></article>
-<article class="card"><h3>Petals & Frames</h3><p>Photography, visual storytelling, and creative work.</p><a class="button" href={links.ventures.petalAndFrame}>Visit</a></article>
-<article class="card"><h3>Blackthorn's Tropicals</h3><p>A growing collection of plants, learning, and cultivation.</p><a class="button" href={links.ventures.blackthornsTropicals}>Visit</a></article>
-<article class="card"><h3>Thorns to Roses</h3><p>Advocacy, support, coaching, and transformation.</p><a class="button" href={links.ventures.thornsToRoses}>Visit</a></article>
-</div>
-</div>
-</section>
-<section class="quote-band"><div class="container"><blockquote>Blackthorn Enterprises is the business umbrella that helps organize several of these projects. Most people interact with the individual projects directly.</blockquote></div></section>
+  <section>
+    <div class="container">
+      <div class="section-heading">
+        <span class="kicker">Projects</span>
+        <h1>Things I'm building.</h1>
+        <p>These are the projects, businesses, creative endeavors, and initiatives that make up different parts of my work and interests.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-heading"><span class="kicker">Technology</span><h2>Systems, security, learning, and technical exploration.</h2></div>
+      <div class="grid">
+        <article class="card"><h3>TechNerd</h3><p>Technology consulting, engineering, security, and practical technical solutions.</p><a class="button" href={links.ventures.techNerd}>Visit</a></article>
+        <article class="card"><h3>Rootworks</h3><p>Learning, experimentation, infrastructure, and technical exploration.</p><a class="button" href={links.ventures.rootworks}>Visit</a></article>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-heading"><span class="kicker">Writing</span><h2>Stories, essays, field notes, and publications.</h2></div>
+      <div class="grid">
+        <article class="card"><h3>Blackthorn Field Notes</h3><p>Essays, reflections, technical writing, advocacy notes, memoir updates, and long-form work.</p><a class="button" href={links.ventures.blackthornFieldNotes}>Visit</a></article>
+        <article class="card"><h3>KDP Publications</h3><p>Future book releases, including memoir and other published work, will be listed as they become available.</p><a class="button" href="/writing/">Coming Soon</a></article>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-heading"><span class="kicker">Music</span><h2>Creative expression through sound.</h2></div>
+      <div class="grid">
+        <article class="card"><h3>Glass & Thorns</h3><p>Music, art, identity, transformation, and creative expression.</p><a class="button" href={links.ventures.glassAndThorns}>Visit</a></article>
+        <article class="card"><h3>Pinky Blob</h3><p>An experimental and future creative project currently in development.</p><a class="button" href="/music/">Learn More</a></article>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-heading"><span class="kicker">Photography & Growth</span><h2>Visual storytelling, plants, and creative practice.</h2></div>
+      <div class="grid">
+        <article class="card"><h3>Petals & Frames</h3><p>Photography, visual storytelling, and creative work.</p><a class="button" href={links.ventures.petalAndFrame}>Visit</a></article>
+        <article class="card"><h3>Blackthorn's Tropicals</h3><p>A growing collection of plants, learning, cultivation, and curiosity.</p><a class="button" href={links.ventures.blackthornsTropicals}>Visit</a></article>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-heading"><span class="kicker">Advocacy</span><h2>Support, transformation, and community care.</h2></div>
+      <div class="grid">
+        <article class="card"><h3>Thorns to Roses</h3><p>Advocacy, support, coaching, and helping people move forward.</p><a class="button" href={links.ventures.thornsToRoses}>Visit</a></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="quote-band"><div class="container"><blockquote>Blackthorn Enterprises is the business umbrella that helps organize revenue, liability, and reporting for several income-generating projects. Most people interact with the individual projects directly.</blockquote></div></section>
 </MainLayout>
