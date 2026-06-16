@@ -18,10 +18,10 @@ import { links, ventureCards } from '../data/links';
         <img src={assets.portraits[0]} alt="Corrine J Blackthorn" />
       </div>
       <div>
-        <span class="kicker">About Corrine</span>
-        <h2>Technology, creativity, and compassion.</h2>
-        <p>Everything I build—whether it's a secure system, a photograph, a story, a song, or a business—exists to help people learn, grow, and support one another.</p>
-        <p>This site brings together the many facets of my work: technology, writing, photography, music, entrepreneurship, and advocacy.</p>
+        <span class="kicker">Who I Am</span>
+        <h2>A technologist who creates and advocates.</h2>
+        <p>I am a technologist, creator, advocate, entrepreneur, writer, photographer, musician, and lifelong learner.</p>
+        <p>Much of who I am today was shaped by compassion, resilience, curiosity, and a belief that people deserve opportunities to learn, grow, belong, and succeed.</p>
         <a class="button" href="/about/">Read my story</a>
       </div>
     </div>
@@ -29,19 +29,24 @@ import { links, ventureCards } from '../data/links';
 
   <section class="quote-band">
     <div class="container">
-      <blockquote>Community-centered support and success through technology, creativity, and advocacy.</blockquote>
+      <blockquote>At first glance, technology, photography, music, writing, advocacy, entrepreneurship, and even plants may seem unrelated. To me, they are all expressions of the same belief: people deserve the opportunity to learn, grow, create, belong, and succeed.</blockquote>
     </div>
   </section>
 
   <section>
     <div class="container">
       <div class="section-heading">
-        <span class="kicker">Ventures</span>
-        <h2>Connected work. Different doors.</h2>
-        <p>Each venture has its own purpose, but they share the same roots: compassion, creativity, learning, and support.</p>
+        <span class="kicker">What I Do</span>
+        <h2>Different forms of work. One connected purpose.</h2>
+        <p>I wear many hats, but the work is driven by the same goal: helping people learn, grow, create, belong, and succeed.</p>
       </div>
-      <div class="link-list">
-        {ventureCards.map((venture) => <a class="link-card" href={venture.href}><h3>{venture.title}</h3><p>{venture.description}</p></a>)}
+      <div class="grid">
+        <article class="card"><h3>Technology</h3><p>Building secure, sustainable, and people-centered systems.</p><a class="button" href="/technology/">Explore</a></article>
+        <article class="card"><h3>Photography</h3><p>Capturing beauty, meaning, and moments that might otherwise go unnoticed.</p><a class="button" href="/photography/">View</a></article>
+        <article class="card"><h3>Writing</h3><p>Stories, essays, reflections, field notes, memoir, and future publications.</p><a class="button" href="/writing/">Read</a></article>
+        <article class="card"><h3>Music</h3><p>Glass & Thorns and creative expression through sound.</p><a class="button" href="/music/">Listen</a></article>
+        <article class="card"><h3>Advocacy</h3><p>Supporting access, dignity, inclusion, compassion, and community.</p><a class="button" href="/advocacy/">Learn</a></article>
+        <article class="card"><h3>Ventures</h3><p>Projects, organizations, and initiatives that bring these ideas into the world.</p><a class="button" href="/ventures/">Explore</a></article>
       </div>
     </div>
   </section>
@@ -51,7 +56,7 @@ import { links, ventureCards } from '../data/links';
       <div class="section-heading">
         <span class="kicker">Photography</span>
         <h2>A glimpse through the lens.</h2>
-        <p>Quiet moments, changing light, landscapes, food, people, and the beauty hidden in everyday places.</p>
+        <p>Photography helps me slow down and notice the beauty hidden in ordinary moments.</p>
       </div>
       <div class="gallery">
         {assets.photography.slice(0, 6).map((src) => <figure><img src={src} alt="Photography by Corrine J Blackthorn" loading="lazy" /></figure>)}
@@ -65,7 +70,7 @@ import { links, ventureCards } from '../data/links';
       <div>
         <span class="kicker">Music</span>
         <h2>Glass & Thorns</h2>
-        <p>Music born from transformation, resilience, identity, and self-discovery.</p>
+        <p>Some experiences are difficult to explain through technology or writing. Music gives those experiences another voice.</p>
         <p>Listen to Glass & Thorns on Spotify, Apple Music, and YouTube.</p>
         <div class="hero-actions">
           <a class="button" href={links.music.spotify}>Spotify</a>
@@ -77,24 +82,37 @@ import { links, ventureCards } from '../data/links';
     </div>
   </section>
 
-  <section class="quote-band">
+  <section>
     <div class="container">
-      <blockquote>Love like today is your last. Live like tomorrow may not come.</blockquote>
+      <div class="section-heading">
+        <span class="kicker">What I Care About</span>
+        <h2>Compassion, community, access, and curiosity.</h2>
+        <p>The details of the work change. The values behind it do not.</p>
+      </div>
+      <div class="grid">
+        <article class="card"><h3>Compassion</h3><p>Helping people feel seen, supported, and understood.</p></article>
+        <article class="card"><h3>Community</h3><p>Learning, growing, and succeeding together instead of alone.</p></article>
+        <article class="card"><h3>Access</h3><p>Removing barriers and creating opportunities for people pushed aside.</p></article>
+      </div>
     </div>
   </section>
 
   <section>
     <div class="container">
       <div class="section-heading">
-        <span class="kicker">Explore</span>
-        <h2>What I build and create.</h2>
-        <p>Different forms of work, one connected ecosystem.</p>
+        <span class="kicker">Where the Work Lives</span>
+        <h2>Projects, ventures, and creative homes.</h2>
+        <p>These are the places where different parts of my work continue to grow.</p>
       </div>
-      <div class="grid">
-        <article class="card"><h3>Technology</h3><p>Identity, security, governance, consulting, and practical problem solving.</p><a class="button" href="/technology/">Explore</a></article>
-        <article class="card"><h3>Writing</h3><p>Essays, memoir, field notes, reflections, and future KDP releases.</p><a class="button" href="/writing/">Read</a></article>
-        <article class="card"><h3>Advocacy</h3><p>Community-centered work for access, dignity, trans rights, disability rights, and support.</p><a class="button" href="/advocacy/">Learn</a></article>
+      <div class="link-list">
+        {ventureCards.map((venture) => <a class="link-card" href={venture.href}><h3>{venture.title}</h3><p>{venture.description}</p></a>)}
       </div>
+    </div>
+  </section>
+
+  <section class="quote-band">
+    <div class="container">
+      <blockquote>I hope they remember that I cared. I hope they remember that I fought for people who could not always fight for themselves. I hope they remember that no matter what life put in front of me, I chose compassion.</blockquote>
     </div>
   </section>
 </MainLayout>
