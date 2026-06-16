@@ -3,4 +3,21 @@ import MainLayout from '../layouts/MainLayout.astro';
 import { links } from '../data/links';
 ---
 <MainLayout title="Technology | Corrine J Blackthorn">
-<section><div class="container"><div class="section-heading"><span class="kicker">Technology</span><h1>Technologist. Problem solver. Security advocate.</h1><p>I've spent my career helping organizations build secure, scalable, and sustainable systems while empowering people through technology.</p></div><div class="grid"><article class="card"><h3>Identity & Access</h3><p>IAM, governance, lifecycle management, and access strategy.</p></article><article class="card"><h3>Security</h3><p>Information security, risk reduction, awareness, and practical defense.</p></article><article class="card"><h3>Systems</h3><p>Infrastructure, automation, cloud platforms, and operational excellence.</p></article></div><p><a class="button" href={links.personal.linkedin}>LinkedIn</a></p></div></section></MainLayout>
+  <section>
+    <div class="container">
+      <div class="section-heading">
+        <span class="kicker">Technology</span>
+        <h1>Technology matters because it affects people.</h1>
+        <p>The systems we build shape opportunities, remove barriers, protect communities, and influence how people experience work, safety, access, and belonging.</p>
+        <p>My work in technology has centered on identity, security, governance, infrastructure, and practical problem solving. The goal is not technology for its own sake. The goal is building systems that help people succeed.</p>
+      </div>
+      <div class="grid">
+        <article class="card"><h3>Identity & Access</h3><p>IAM, governance, lifecycle management, access strategy, and helping organizations understand who has access to what and why.</p></article>
+        <article class="card"><h3>Security</h3><p>Information security, risk reduction, awareness, practical defense, and translating security into something people can actually use.</p></article>
+        <article class="card"><h3>Systems</h3><p>Infrastructure, automation, cloud platforms, operations, and sustainable technical foundations.</p></article>
+      </div>
+      <p style="margin-top: 24px"><a class="button" href={links.personal.linkedin}>LinkedIn</a> <a class="button" href={links.ventures.techNerd}>TechNerd</a></p>
+    </div>
+  </section>
+  <section class="quote-band"><div class="container"><blockquote>Good technology should make life safer, clearer, more accessible, and more human.</blockquote></div></section>
+</MainLayout>
