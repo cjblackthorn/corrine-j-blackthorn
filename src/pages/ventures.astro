@@ -1,0 +1,29 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import { ventureCards, links } from '../data/links';
+---
+<MainLayout title="Ventures | Corrine J Blackthorn">
+  <section>
+    <div class="container">
+      <div class="section-heading">
+        <span class="kicker">Blackthorn Ecosystem</span>
+        <h1>Ventures</h1>
+        <p>Different doors into connected work: technology, photography, music, writing, coaching, plants, and community-centered support.</p>
+      </div>
+      <div class="link-list">
+        {ventureCards.map((venture) => <a class="link-card" href={venture.href}><h3>{venture.title}</h3><p>{venture.description}</p></a>)}
+      </div>
+    </div>
+  </section>
+  <section class="quote-band"><div class="container"><blockquote>Community-centered support and success through technology, creativity, and advocacy.</blockquote></div></section>
+  <section>
+    <div class="container">
+      <div class="section-heading"><span class="kicker">Professional Links</span><h2>Connect with the work.</h2></div>
+      <div class="grid">
+        <article class="card"><h3>Corrine on LinkedIn</h3><p>Professional background, technology work, and public updates.</p><a class="button" href={links.personal.linkedin}>LinkedIn</a></article>
+        <article class="card"><h3>TechNerd LinkedIn</h3><p>Technology consulting and company presence.</p><a class="button" href={links.linkedin.techNerd}>TechNerd</a></article>
+        <article class="card"><h3>Thorns to Roses</h3><p>Coaching, growth, and transformation work.</p><a class="button" href={links.linkedin.thornsToRoses}>LinkedIn</a></article>
+      </div>
+    </div>
+  </section>
+</MainLayout>
