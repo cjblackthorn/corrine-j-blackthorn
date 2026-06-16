@@ -1,12 +1,12 @@
 ---
-import { links } from '../data/links';
-
 const navItems = [
   { label: 'About', href: '/about/' },
   { label: 'Technology', href: '/technology/' },
   { label: 'Photography', href: '/photography/' },
   { label: 'Writing', href: '/writing/' },
+  { label: 'Music', href: '/music/' },
   { label: 'Advocacy', href: '/advocacy/' },
+  { label: 'Projects', href: '/projects/' },
 ];
 ---
 <header class="site-header">
@@ -17,8 +17,6 @@ const navItems = [
     </a>
     <nav class="nav-links" aria-label="Main navigation">
       {navItems.map((item) => <a href={item.href}>{item.label}</a>)}
-      <a href="/ventures/">Ventures</a>
-      <a class="button" href={links.ventures.blackthornEnterprises}>Blackthorn Enterprises</a>
     </nav>
   </div>
 </header>
