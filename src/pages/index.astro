@@ -5,7 +5,12 @@ import { assets } from '../data/assets';
 import { links, ventureCards } from '../data/links';
 ---
 <MainLayout title="Corrine J Blackthorn">
-  <Hero image={assets.hero} />
+  <Hero
+    image={assets.hero}
+    title="Corrine J Blackthorn"
+    kicker="Technologist. Creator. Advocate."
+    description="Through technology, creativity, and community, I work to help people feel seen, inspired, and curious."
+  />
 
   <section>
     <div class="container split">
@@ -15,10 +20,16 @@ import { links, ventureCards } from '../data/links';
       <div>
         <span class="kicker">About Corrine</span>
         <h2>Technology, creativity, and compassion.</h2>
-        <p>I build systems, create art, tell stories, and cultivate spaces where people can grow.</p>
-        <p>This site is the personal hub for my technology work, photography, writing, music, advocacy, baking, and the wider Blackthorn ecosystem.</p>
+        <p>Everything I build—whether it's a secure system, a photograph, a story, a song, or a business—exists to help people learn, grow, and support one another.</p>
+        <p>This site brings together the many facets of my work: technology, writing, photography, music, entrepreneurship, and advocacy.</p>
         <a class="button" href="/about/">Read my story</a>
       </div>
+    </div>
+  </section>
+
+  <section class="quote-band">
+    <div class="container">
+      <blockquote>Community-centered support and success through technology, creativity, and advocacy.</blockquote>
     </div>
   </section>
 
@@ -49,12 +60,6 @@ import { links, ventureCards } from '../data/links';
     </div>
   </section>
 
-  <section class="quote-band">
-    <div class="container">
-      <blockquote>Helping people feel seen, inspired, and curious.</blockquote>
-    </div>
-  </section>
-
   <section>
     <div class="container split">
       <div>
@@ -69,6 +74,12 @@ import { links, ventureCards } from '../data/links';
         </div>
       </div>
       <div class="image-frame"><img src={assets.branding[0]} alt="Glass and Thorns branding" loading="lazy" /></div>
+    </div>
+  </section>
+
+  <section class="quote-band">
+    <div class="container">
+      <blockquote>Love like today is your last. Live like tomorrow may not come.</blockquote>
     </div>
   </section>
 
