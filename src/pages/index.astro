@@ -46,7 +46,7 @@ import { links, ventureCards } from '../data/links';
         <article class="card"><h3>Writing</h3><p>Stories, essays, reflections, field notes, memoir, and future publications.</p><a class="button" href="/writing/">Read</a></article>
         <article class="card"><h3>Music</h3><p>Glass & Thorns and creative expression through sound.</p><a class="button" href="/music/">Listen</a></article>
         <article class="card"><h3>Advocacy</h3><p>Supporting access, dignity, inclusion, compassion, and community.</p><a class="button" href="/advocacy/">Learn</a></article>
-        <article class="card"><h3>Ventures</h3><p>Projects, organizations, and initiatives that bring these ideas into the world.</p><a class="button" href="/ventures/">Explore</a></article>
+        <article class="card"><h3>Projects</h3><p>Projects, creative homes, and initiatives that bring these ideas into the world.</p><a class="button" href="/projects/">Explore</a></article>
       </div>
     </div>
   </section>
@@ -101,12 +101,13 @@ import { links, ventureCards } from '../data/links';
     <div class="container">
       <div class="section-heading">
         <span class="kicker">Where the Work Lives</span>
-        <h2>Projects, ventures, and creative homes.</h2>
+        <h2>Projects and creative homes.</h2>
         <p>These are the places where different parts of my work continue to grow.</p>
       </div>
       <div class="link-list">
         {ventureCards.map((venture) => <a class="link-card" href={venture.href}><h3>{venture.title}</h3><p>{venture.description}</p></a>)}
       </div>
+      <p style="margin-top: 24px"><a class="button" href="/projects/">View all projects</a></p>
     </div>
   </section>
 
