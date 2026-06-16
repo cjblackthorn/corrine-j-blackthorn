@@ -9,12 +9,14 @@ import { links } from '../data/links';
       <div class="section-heading">
         <span class="kicker">Petal & Frame</span>
         <h1>Photography</h1>
-        <p>I photograph quiet moments, changing light, nature, food, people, and the beauty hidden in everyday places.</p>
-        <p><a class="button" href={links.ventures.petalAndFrame}>Visit Petal & Frame Photography</a></p>
+        <p>Photography helps me slow down and notice the beauty hidden in ordinary moments.</p>
+        <p>I photograph quiet moments, changing light, nature, food, people, and the details that often pass by unnoticed.</p>
+        <p><a class="button" href={links.ventures.petalAndFrame}>Visit Petal & Frame</a></p>
       </div>
       <div class="gallery">
         {assets.photography.map((src) => <figure><img src={src} alt="Photography by Corrine J Blackthorn" loading="lazy" /></figure>)}
       </div>
     </div>
   </section>
+  <section class="quote-band"><div class="container"><blockquote>Quiet moments. Changing light. Everyday beauty.</blockquote></div></section>
 </MainLayout>
