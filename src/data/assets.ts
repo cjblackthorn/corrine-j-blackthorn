@@ -35,6 +35,10 @@ export const assets = {
     '/images/baking/IMG_7003.jpeg',
     '/images/baking/IMG_9394.jpeg',
   ],
+  brandImages: {
+    glassRoseCollective: '/images/branding/20179EFE-F90D-4789-839B-C657BDF54B57.png',
+    glassAndThorns: '/images/branding/2CB9F118-DB9C-4E73-9BB6-1798198F5A9D.png',
+  },
   branding: [
     '/images/branding/20179EFE-F90D-4789-839B-C657BDF54B57.png',
     '/images/branding/2CB9F118-DB9C-4E73-9BB6-1798198F5A9D.png',
