@@ -9,13 +9,35 @@ const year = new Date().getFullYear();
       <p>Technologist • Creator • Advocate</p>
       <p>© {year} Corrine J Blackthorn. All rights reserved.</p>
     </div>
-    <div class="nav-links">
-      <a href="/about/">About</a>
-      <a href="/projects/">Projects</a>
-      <a href={links.personal.linkedin}>LinkedIn</a>
-      <a href={links.personal.github}>GitHub</a>
-      <a href={links.music.spotify}>Spotify</a>
-      <a href={links.ventures.blackthornFieldNotes}>Field Notes</a>
+
+    <div>
+      <strong>Explore</strong>
+      <div class="nav-links">
+        <a href="/about/">About</a>
+        <a href="/technology/">Technology</a>
+        <a href="/writing/">Writing</a>
+        <a href="/photography/">Photography</a>
+        <a href="/music/">Music</a>
+        <a href="/projects/">Projects</a>
+      </div>
+    </div>
+
+    <div>
+      <strong>Connect</strong>
+      <div class="nav-links">
+        <a href={links.personal.linkedin}>LinkedIn</a>
+        <a href={links.personal.github}>GitHub</a>
+        <a href={links.music.spotify}>Spotify</a>
+      </div>
+    </div>
+
+    <div>
+      <strong>Current Work</strong>
+      <div class="nav-links">
+        <a href="/writing/">All of Me</a>
+        <a href="/music/">Glass & Thorns</a>
+        <a href={links.ventures.blackthornFieldNotes}>Blackthorn Field Notes</a>
+      </div>
     </div>
   </div>
 </footer>
