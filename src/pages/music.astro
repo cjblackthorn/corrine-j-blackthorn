@@ -4,4 +4,33 @@ import { links } from '../data/links';
 import { assets } from '../data/assets';
 ---
 <MainLayout title="Music | Corrine J Blackthorn">
-<section><div class="container split"><div><span class="kicker">Glass & Thorns</span><h1>Music</h1><p>Some experiences are difficult to explain through technology or writing. Music gives those experiences another voice.</p><p>Glass & Thorns is my artist project exploring identity, transformation, resilience, growth, and becoming who we are meant to be.</p><p>My Body Isn't Home Anymore is the first public step in that journey, with more music and creative projects planned for the future.</p><div class="hero-actions"><a class="button" href={links.music.spotify}>Spotify</a><a class="button" href={links.music.appleMusic}>Apple Music</a><a class="button" href={links.music.youtube}>YouTube</a></div></div><div class="image-frame"><img src={assets.branding[0]} alt="Glass and Thorns branding" loading="lazy" /></div></div></section><section class="quote-band"><div class="container"><blockquote>Art gives language to the parts of us that survived before we had words.</blockquote></div></section><section><div class="container"><div class="grid"><article class="card"><h3>Glass & Thorns</h3><p>The primary music project and home for current releases.</p></article><article class="card"><h3>Pinky Blob</h3><p>An experimental and future creative project currently in development.</p></article><article class="card"><h3>Why Music</h3><p>Music creates space for emotions, stories, and experiences that do not always fit neatly into other forms of communication.</p></article></div></div></section></MainLayout>
+  <section>
+    <div class="container split">
+      <div>
+        <span class="kicker">Glass & Thorns</span>
+        <h1>Music</h1>
+        <p>Some experiences are difficult to explain through technology or writing. Music gives those experiences another voice.</p>
+        <p>Glass & Thorns is my artist project exploring identity, transformation, resilience, growth, and becoming who we are meant to be.</p>
+        <p>My Body Isn't Home Anymore is the first public step in that journey, with more music and creative projects planned for the future.</p>
+        <div class="hero-actions">
+          <a class="button" href={links.music.spotify}>Spotify</a>
+          <a class="button" href={links.music.appleMusic}>Apple Music</a>
+          <a class="button" href={links.music.youtube}>YouTube</a>
+        </div>
+      </div>
+      <div class="image-frame"><img src={assets.brandImages.glassAndThorns} alt="Glass & Thorns branding" loading="lazy" /></div>
+    </div>
+  </section>
+
+  <section class="quote-band"><div class="container"><blockquote>Art gives language to the parts of us that survived before we had words.</blockquote></div></section>
+
+  <section>
+    <div class="container">
+      <div class="grid">
+        <article class="card"><h3>Glass & Thorns</h3><p>The primary music project and home for current releases.</p></article>
+        <article class="card"><h3>Current Release</h3><p>My Body Isn't Home Anymore is the first public release from Glass & Thorns.</p></article>
+        <article class="card"><h3>Why Music</h3><p>Music creates space for emotions, stories, and experiences that do not always fit neatly into other forms of communication.</p></article>
+      </div>
+    </div>
+  </section>
+</MainLayout>
