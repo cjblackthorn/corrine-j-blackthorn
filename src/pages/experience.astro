@@ -2,7 +2,7 @@
 import MainLayout from '../layouts/MainLayout.astro';
 import { links } from '../data/links';
 
-const resumeHref = '/resume/Corrine-J-Blackthorn-Professional-Background.pdf';
+const resumeHref = '/resume/Corrine-J-Blackthorn-Resume.pdf';
 
 const focusAreas = [
   {
@@ -36,10 +36,11 @@ const workingStyle = [
         <span class="kicker">Experience</span>
         <h1>Professional background, as part of the whole person.</h1>
         <p>My professional life sits alongside my creative, advocacy, and community-centered work. Technology is one of the ways I help people feel safer, clearer, more capable, and more supported.</p>
-        <p>This page gives prospective employers and collaborators a more complete picture than a traditional resume can hold, while still making the formal version easy to download.</p>
+        <p>This page gives prospective employers and collaborators a more complete picture than a traditional resume can hold, while keeping the formal resume easy to download when someone needs the concise version.</p>
         <div class="hero-actions">
-          <a class="button dark" href={resumeHref} download>Download PDF resume</a>
+          <a class="button dark" href={resumeHref} download>Download resume</a>
           <a class="button" href={links.personal.linkedin}>LinkedIn</a>
+          <a class="button" href={links.personal.github}>GitHub</a>
         </div>
       </div>
       <article class="card">
@@ -100,7 +101,7 @@ const workingStyle = [
         <p>The site gives context; the PDF keeps the standard resume path easy for recruiters, hiring managers, and collaborators.</p>
       </div>
       <p>
-        <a class="button dark" href={resumeHref} download>Download PDF resume</a>
+        <a class="button dark" href={resumeHref} download>Download resume</a>
         <a class="button" href="/technology/">Explore technology work</a>
       </p>
     </div>
