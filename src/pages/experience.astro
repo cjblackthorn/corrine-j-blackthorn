@@ -19,11 +19,50 @@ const focusAreas = [
   },
 ];
 
+const impactHighlights = [
+  {
+    title: 'External AD Cleanup',
+    description: 'Cleaned up more than 10,000 dormant external Active Directory accounts, reducing stale access and improving the health of identity data.',
+  },
+  {
+    title: 'SailPoint IIQ License True-Up',
+    description: 'Created a streamlined license true-up reporting process for SailPoint IIQ, helping reduce runtime and make licensing work easier to repeat.',
+  },
+  {
+    title: 'Privileged Access Protection',
+    description: 'Demonstrated the need for separate Privileged Access Workstations to protect administrator-level account access and reduce catastrophic threat exposure.',
+  },
+  {
+    title: 'Audit Liaison Work',
+    description: 'Helped connect audit needs with technical teams, translating evidence requests, control context, and security process details into clearer action.',
+  },
+];
+
 const workingStyle = [
   'I care about the human experience of technical systems.',
   'I like making messy processes clearer, safer, and easier to maintain.',
   'I bring curiosity, patience, direct communication, and care to cross-functional work.',
   'I value access, inclusion, documentation, and systems that help people succeed.',
+];
+
+const teamSupport = [
+  'Clarify complicated identity and security systems.',
+  'Improve access governance and review workflows.',
+  'Translate security requirements into usable practice.',
+  'Document decisions, evidence, and repeatable processes.',
+  'Support teams through change with patience and context.',
+  'Connect audit, risk, operations, and engineering needs.',
+];
+
+const tools = ['SailPoint IIQ', 'Azure AD', 'ServiceNow', 'PowerShell', 'Jira', 'AWS', 'Microsoft 365'];
+
+const roleFit = [
+  'IAM Governance',
+  'Security Analyst',
+  'GRC',
+  'Security Operations',
+  'Access governance process improvement',
+  'Remote-first security and identity work',
 ];
 ---
 <MainLayout
@@ -44,9 +83,9 @@ const workingStyle = [
         </div>
       </div>
       <article class="card">
-        <h2>At a Glance</h2>
-        <p>I work where technology, security, systems, and people meet. My background includes identity and access, governance, infrastructure, operations, documentation, and practical problem solving.</p>
-        <p>The throughline is care: making systems more understandable, maintainable, secure, and humane.</p>
+        <h2>Resume Preview</h2>
+        <p>Senior information security professional with 20+ years in IT, including IAM governance, GRC, security operations, reporting, automation, and user-centered technical work.</p>
+        <p>I am most aligned with IAM Governance, Security Analyst, and GRC roles, with a strong preference for remote work and openness to consulting, contract, full-time, or part-time opportunities.</p>
       </article>
     </div>
   </section>
@@ -54,6 +93,24 @@ const workingStyle = [
   <section class="quote-band">
     <div class="container">
       <blockquote>A resume can list the work. Experience shows how the work connects.</blockquote>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-heading">
+        <span class="kicker">Selected Impact</span>
+        <h2>Work that made systems cleaner, safer, and easier to trust.</h2>
+        <p>These examples show the kind of practical security and identity work I am proud of: not only identifying risk, but improving the systems and processes around it.</p>
+      </div>
+      <div class="grid">
+        {impactHighlights.map((item) => (
+          <article class="card">
+            <h3>{item.title}</h3>
+            <p>{item.description}</p>
+          </article>
+        ))}
+      </div>
     </div>
   </section>
 
@@ -96,13 +153,72 @@ const workingStyle = [
   <section>
     <div class="container">
       <div class="section-heading">
+        <span class="kicker">How I Help Teams</span>
+        <h2>Turning security complexity into practical movement.</h2>
+        <p>I am useful in the spaces where access, audit, operations, and people overlap. I like making the work clearer so teams can act with more confidence.</p>
+      </div>
+      <div class="link-list">
+        {teamSupport.map((item) => (
+          <div class="link-card">
+            <p>{item}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container split">
+      <div>
+        <span class="kicker">Looking For</span>
+        <h2>Security and identity work where governance matters.</h2>
+        <p>I am most interested in work where identity, security, governance, systems thinking, documentation, and care for users all matter.</p>
+        <p>I am open to consulting, contract, full-time, and part-time roles, with a strong preference for remote work.</p>
+      </div>
+      <div class="link-list">
+        {roleFit.map((item) => (
+          <div class="link-card">
+            <p>{item}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-heading">
+        <span class="kicker">Tools & Learning</span>
+        <h2>Platforms I have worked around, and where I am growing next.</h2>
+        <p>My experience includes identity, service management, cloud, automation, collaboration, and security operations environments. I am also actively pursuing deeper governance, identity, and security architecture learning.</p>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <h3>Tools</h3>
+          <p>{tools.join(' | ')}</p>
+        </article>
+        <article class="card">
+          <h3>Learning</h3>
+          <p>Pursuing CISA, CIRM, SC-300, SC-100, and related security, identity, governance, and risk credentials.</p>
+        </article>
+        <article class="card">
+          <h3>Domains</h3>
+          <p>IAM governance, access lifecycle, audit readiness, security operations, GRC, privileged access, documentation, and process improvement.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-heading">
         <span class="kicker">Formal Resume</span>
         <h2>For employers who need the concise version.</h2>
         <p>The site gives context; the PDF keeps the standard resume path easy for recruiters, hiring managers, and collaborators.</p>
       </div>
       <p>
         <a class="button dark" href={resumeHref} download>Download resume</a>
-        <a class="button" href="/technology/">Explore technology work</a>
+        <a class="button" href={links.personal.linkedin} target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a>
       </p>
     </div>
   </section>
