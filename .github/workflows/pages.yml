@@ -30,6 +30,8 @@ jobs:
         run: npm ci --no-audit --no-fund
       - name: Build Astro site
         run: npm run build
+      - name: Verify SEO sitemap and canonical URLs
+        run: node scripts/check-seo.mjs
       - name: Upload Pages artifact
         if: github.event_name != 'pull_request'
         uses: actions/upload-pages-artifact@v5
