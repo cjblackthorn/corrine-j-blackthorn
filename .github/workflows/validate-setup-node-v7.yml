@@ -1,0 +1,47 @@
+name: Validate setup-node v7 (no deployment)
+
+on:
+  push:
+    branches:
+      - validation/setup-node-v7-20261024
+
+permissions:
+  contents: read
+
+jobs:
+  node-v7-smoke-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Check out proposed PR #9 revision
+        uses: actions/checkout@v4
+      - name: Set up Node.js using proposed v7 action
+        id: setup
+        uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+          cache: npm
+      - name: Verify Node and npm toolchain
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --version
+          npm --version
+          test "${{ steps.setup.outputs.node-version }}" != ''
+          echo "setup-node reported version: ${{ steps.setup.outputs.node-version }}"
+          echo "cache-hit: ${{ steps.setup.outputs.cache-hit }}"
+          echo "cache-primary-key: ${{ steps.setup.outputs.cache-primary-key }}"
+          test -s package-lock.json
+      - name: Install locked dependencies
+        run: npm ci --no-audit --no-fund
+      - name: Build Astro site
+        run: npm run build
+      - name: Verify critical build outputs
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -s dist/index.html
+          test -s dist/CNAME
+          test -s dist/resume/Corrine-J-Blackthorn-Resume.pdf
+          echo "Node 24 + npm cache + npm ci + Astro build + static output verified."
+          echo "No Pages upload or deployment action exists in this workflow."
