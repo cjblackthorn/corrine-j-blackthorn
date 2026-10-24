@@ -1,0 +1,48 @@
+name: Validate checkout v7 (no deployment)
+
+on:
+  push:
+    branches:
+      - validation/checkout-v7-20261024
+
+permissions:
+  contents: read
+
+jobs:
+  checkout-v7-smoke-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout repository with proposed v7 action
+        id: checkout
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - name: Verify checked-out source and commit
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -s package-lock.json
+          test -s package.json
+          test -s .github/workflows/pages.yml
+          test -s public/resume/Corrine-J-Blackthorn-Resume.pdf
+          test "$(git rev-parse HEAD)" = "$GITHUB_SHA"
+          echo "Checkout v7 retrieved expected repository revision."
+          echo "commit: $(git rev-parse HEAD)"
+      - name: Setup Node 24
+        uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+          cache: npm
+      - name: Install locked dependencies
+        run: npm ci --no-audit --no-fund
+      - name: Build Astro
+        run: npm run build
+      - name: Validate static output
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -s dist/index.html
+          test -s dist/CNAME
+          test -s dist/resume/Corrine-J-Blackthorn-Resume.pdf
+          echo "Checkout v7, npm ci, and production build validated. No upload or deployment."
