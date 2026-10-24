@@ -1,0 +1,66 @@
+name: Validate Pages artifact v5 (no deployment)
+
+on:
+  push:
+    branches:
+      - validation/pages-artifact-v5-20261024
+
+permissions:
+  contents: read
+
+jobs:
+  package-smoke-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Check out proposed PR #8 revision
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - name: Install locked dependencies
+        run: npm ci --no-audit --no-fund
+      - name: Build Astro site
+        run: npm run build
+      - name: Verify key site files before packaging
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -s dist/index.html
+          test -s dist/CNAME
+          test -s dist/resume/Corrine-J-Blackthorn-Resume.pdf
+          echo "Expected pages, custom-domain file, and resume exist in dist."
+          echo "Hidden files within dist (if any):"
+          find dist -name '.*' -print
+          echo "Symlinks within dist (if any):"
+          find dist -type l -print
+          echo "Build size and number of files:"
+          du -sh dist
+          find dist -type f | wc -l
+      - name: Upload Pages artifact using proposed v5 action
+        id: upload
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: dist
+      - name: Download uploaded artifact for structural verification
+        uses: actions/download-artifact@v4
+        with:
+          name: github-pages
+          path: .artifact-inspection
+      - name: Verify uploaded Pages-format archive contents
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -s .artifact-inspection/artifact.tar
+          tar -tf .artifact-inspection/artifact.tar > /tmp/pages-artifact-members.txt
+          grep -Fxq './index.html' /tmp/pages-artifact-members.txt
+          grep -Fxq './CNAME' /tmp/pages-artifact-members.txt
+          grep -Fxq './resume/Corrine-J-Blackthorn-Resume.pdf' /tmp/pages-artifact-members.txt
+          echo "Verified index.html, CNAME, and resume inside artifact.tar."
+          echo "Archive member count:"
+          wc -l /tmp/pages-artifact-members.txt
+          echo "Sample members:"
+          head -n 30 /tmp/pages-artifact-members.txt
+          echo "No deployment job or GitHub Pages write permissions exist in this workflow."
