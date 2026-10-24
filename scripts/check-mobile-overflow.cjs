@@ -9,7 +9,10 @@ async function main() {
       reducedMotion: "reduce"
     });
     const page = await context.newPage();
-    await page.goto("http://127.0.0.1:4173/", { waitUntil: "domcontentloaded", timeout: 20000 });
+    const navigation = await page.goto("http://127.0.0.1:4173/", { waitUntil: "domcontentloaded", timeout: 20000 });
+    await page.waitForLoadState("load");
+    console.log("PAGE-INFO", JSON.stringify({url: page.url(), status: navigation?.status(), title: await page.title(), viewportMeta: await page.locator('meta[name="viewport"]').getAttribute("content"), stylesheets: await page.locator('link[rel="stylesheet"]').evaluateAll(els=>els.map(el=>el.href)), bodyMargin: await page.evaluate(()=>getComputedStyle(document.body).margin), cssCount: await page.evaluate(()=>document.styleSheets.length)}));
+    if (navigation?.status() !== 200) throw new Error("Local test page did not return 200");
     const result = await page.evaluate(() => {
       const visibleWidth = window.innerWidth;
       const elements = [document.documentElement, document.body, ...document.body.querySelectorAll("*")];
