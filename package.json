@@ -1,7 +1,7 @@
 {
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "astro build && node scripts/render-brand-assets.mjs",
     "preview": "astro preview",
     "watermark": "node tools/watermark-images.mjs"
   },

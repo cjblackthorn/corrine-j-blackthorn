@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title description">
+  <title id="title">Corrine J. Blackthorn</title>
+  <desc id="description">A warm, literary social card with plum typography, a blackthorn illustration, and one discreet blush cherry blossom.</desc>
+  <defs>
+    <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff7ee"/>
+      <stop offset=".65" stop-color="#f6eae4"/>
+      <stop offset="1" stop-color="#f1dfe0"/>
+    </linearGradient>
+    <linearGradient id="dusk" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#edc8be" stop-opacity=".65"/>
+      <stop offset="1" stop-color="#bda6b5" stop-opacity=".12"/>
+    </linearGradient>
+    <linearGradient id="spine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#301c2b"/>
+      <stop offset=".45" stop-color="#523349"/>
+      <stop offset="1" stop-color="#231823"/>
+    </linearGradient>
+    <filter id="soft"><feGaussianBlur stdDeviation="12"/></filter>
+    <g id="bloom" fill="#fbf0eb" stroke="#a66f83" stroke-width=".9">
+      <ellipse cx="0" cy="-8.5" rx="4.6" ry="8"/>
+      <ellipse cx="0" cy="-8.5" rx="4.6" ry="8" transform="rotate(72)"/>
+      <ellipse cx="0" cy="-8.5" rx="4.6" ry="8" transform="rotate(144)"/>
+      <ellipse cx="0" cy="-8.5" rx="4.6" ry="8" transform="rotate(216)"/>
+      <ellipse cx="0" cy="-8.5" rx="4.6" ry="8" transform="rotate(288)"/>
+      <circle r="3.2" fill="#d5b36f" stroke="none"/>
+      <circle cx="-1" cy="-1" r=".9" fill="#6c4254" stroke="none"/>
+    </g>
+  </defs>
+  <rect width="1200" height="630" fill="url(#paper)"/>
+  <rect x="26" y="26" width="1148" height="578" rx="8" fill="none" stroke="#6b4558" stroke-opacity=".6" stroke-width="1.5"/>
+  <rect x="36" y="36" width="1128" height="558" rx="5" fill="none" stroke="#ae8295" stroke-opacity=".28" stroke-width="1"/>
+  <path d="M25 96V27h64 M1112 26h62v69 M26 533v70h67 M1107 604h67v-70" fill="none" stroke="#6b4558" stroke-width="3" stroke-opacity=".62"/>
+  <g opacity=".45">
+    <ellipse cx="1020" cy="226" rx="190" ry="165" fill="url(#dusk)" filter="url(#soft)"/>
+    <circle cx="1010" cy="170" r="66" fill="#e6bcb2" opacity=".34"/>
+    <path d="M730 485L865 376l73 57 79-74 142 132v107H730Z" fill="#9c8299" opacity=".12"/>
+    <path d="M721 513l116-69 72 40 73-46 177 78v88H721Z" fill="#5c475f" opacity=".12"/>
+  </g>
+  <g opacity=".24" stroke="#533047" stroke-width="1.4">
+    <rect x="67" y="373" width="46" height="155" rx="3" fill="url(#spine)"/>
+    <rect x="115" y="360" width="35" height="168" rx="2" fill="#704a5b"/>
+    <rect x="153" y="391" width="43" height="137" rx="3" fill="#6c515f"/>
+    <path d="M72 398h36M72 500h36M121 382h22M121 507h22M158 413h33M158 509h33" stroke="#d5b578" stroke-width="2"/>
+  </g>
+  <g fill="none" stroke="#553544" stroke-width="3.8" stroke-linecap="round">
+    <path d="M38 476c83-72 143-117 191-184 30-41 52-88 84-132"/>
+    <path d="M142 383c12-37 13-65 7-91" stroke-width="2.4"/>
+    <path d="M202 333c28-8 40-18 52-38" stroke-width="2.4"/>
+    <path d="M269 225c13-18 23-24 44-31" stroke-width="2.4"/>
+  </g>
+  <g stroke="#553544" stroke-width="2" stroke-linecap="round" fill="none">
+    <path d="M98 423l-20-28m82-32 4-25m36-9-2-30m77-99 24 2m-153 180-14 0"/>
+  </g>
+  <g fill="#64475c" opacity=".85">
+    <path d="M116 409c-38-10-50-27-54-41 31 0 45 10 54 41Z"/>
+    <path d="M152 371c4-34 18-48 32-52 1 26-9 41-32 52Z"/>
+    <path d="M215 303c-32-2-46-15-51-30 22-2 40 10 51 30Z"/>
+    <path d="M273 222c-3-35 9-50 23-58 7 24-2 45-23 58Z"/>
+  </g>
+  <g fill="#e5d2ce" stroke="#99667d" stroke-width="1.1">
+    <circle cx="143" cy="381" r="5"/><circle cx="152" cy="390" r="4"/>
+    <circle cx="254" cy="279" r="5"/>
+  </g>
+  <use href="#bloom" transform="translate(214 319) scale(1.42)"/>
+  <use href="#bloom" transform="translate(310 159) scale(.92)"/>
+  <g transform="translate(134 393) scale(.53)">
+    <g fill="#de9daf" stroke="#ab7383" stroke-width=".6">
+      <ellipse cx="0" cy="-9" rx="5" ry="8.6"/>
+      <ellipse cx="0" cy="-9" rx="5" ry="8.6" transform="rotate(72)"/>
+      <ellipse cx="0" cy="-9" rx="5" ry="8.6" transform="rotate(144)"/>
+      <ellipse cx="0" cy="-9" rx="5" ry="8.6" transform="rotate(216)"/>
+      <ellipse cx="0" cy="-9" rx="5" ry="8.6" transform="rotate(288)"/>
+      <circle r="3.2" fill="#efd8a2" stroke="none"/>
+    </g>
+  </g>
+  <text x="352" y="151" font-family="Georgia, 'DejaVu Serif', serif" fill="#80586e" font-size="18" letter-spacing="5">PERSONAL WEBSITE</text>
+  <text x="344" y="267" font-family="Georgia, 'DejaVu Serif', serif" fill="#341b2e" font-size="74" letter-spacing="-2">Corrine J.</text>
+  <text x="344" y="364" font-family="Georgia, 'DejaVu Serif', serif" fill="#341b2e" font-size="86" letter-spacing="-3">Blackthorn</text>
+  <path d="M350 394h480" stroke="#9e7880" stroke-width="1.6" opacity=".7"/>
+  <path d="M842 394h40" stroke="#c49f68" stroke-width="2.2" opacity=".9"/>
+  <text x="353" y="446" font-family="Georgia, 'DejaVu Serif', serif" fill="#5a3d4d" font-size="24" font-style="italic">Technologist, writer, creator, and advocate.</text>
+  <text x="352" y="543" font-family="Arial, 'DejaVu Sans', sans-serif" fill="#6c4b5a" font-size="15" letter-spacing="2.1">CORRINEJBLACKTHORN.COM</text>
+</svg>
