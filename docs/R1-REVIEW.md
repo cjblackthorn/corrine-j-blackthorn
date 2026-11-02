@@ -4,16 +4,21 @@
 
 ## Scope
 - Adjust light-background accent labels to deep plum and muted text to a darker neutral, preserving gold on dark hero backgrounds.
-- Add a monogram-inspired `public/favicon.svg`.
-- Add SVG source for a 1200 x 630 social preview; generate PNG variants at build time using existing `sharp`.
+- Add a serif CB editorial monogram and restrained thorn sprig in `public/favicon.svg`. The ornament stays legible at browser-tab sizes.
+- Add SVG source for a 1200 x 630 editorial social preview, pairing the literary styling of Concept A with the inviting warmth of Concept C. Generate PNG variants at build time using existing `sharp`.
 - Set page-specific descriptions for all ten existing pages.
 - Extend shared layout with Open Graph, Twitter/X preview, and mobile touch icon metadata.
 - Extend build/SEO checks to ensure generated brand assets and metadata exist.
 
 ## Visual approval required
-- Approve or request revisions to the proposed "C" thorn favicon.
-- Approve or request revisions to the plum-and-cream social preview.
+- Approve or request revisions to the refined cream-on-plum CB monogram with a small thorn accent.
+- Approve or request revisions to the warm cream-and-plum editorial social preview. It contains a single small blush cherry blossom tucked into a blackthorn illustration, not a prominent floral theme.
+- The old generic "C" favicon and dark corporate social-card design were explicitly rejected; do not reintroduce them.
+- Neither visual has final design approval; this remains a draft.
 - Confirm the adjusted contrast palette in desktop/mobile screenshots.
+
+## Design direction confirmed on November 2, 2026
+The owner preferred the editorial/author treatment (A) and the personal/professional warmth of (C). Cherry blossoms should be subtle and personal rather than a dominant brand emblem. Blackthorn branches, literary typography, and warmth are the primary design language.
 
 ## CI checks
 - `npm ci --no-audit --no-fund`
