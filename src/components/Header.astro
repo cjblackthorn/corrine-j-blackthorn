@@ -10,14 +10,49 @@ const navItems = [
   { label: 'Projects', href: '/projects/' },
 ];
 ---
-<header class="site-header">
+<header class="site-header" data-site-header>
   <div class="container nav">
     <a class="brand" href="/" aria-label="Corrine J Blackthorn home">
       <span>Corrine J Blackthorn</span>
       <span>Technologist • Creator • Advocate</span>
     </a>
-    <nav class="nav-links" aria-label="Main navigation">
-      {navItems.map((item) => <a href={item.href}>{item.label}</a>)}
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-primary-nav">
+      <span class="nav-toggle-icon" aria-hidden="true"><span></span><span></span><span></span></span>
+      <span class="nav-toggle-label">Menu</span>
+    </button>
+    <nav class="nav-links primary-nav" id="site-primary-nav" aria-label="Main navigation">
+      {navItems.map((item) => <a href={item.href} aria-current={Astro.url.pathname === item.href ? 'page' : undefined}>{item.label}</a>)}
     </nav>
   </div>
 </header>
+
+<script>
+  for (const header of document.querySelectorAll<HTMLElement>('[data-site-header]')) {
+    const toggle = header.querySelector<HTMLButtonElement>('.nav-toggle');
+    const nav = header.querySelector<HTMLElement>('#site-primary-nav');
+    if (!toggle || !nav) continue;
+    header.classList.add('has-menu-js');
+
+    const setOpen = (open: boolean) => {
+      toggle.setAttribute('aria-expanded', String(open));
+      toggle.querySelector('.nav-toggle-label')!.textContent = open ? 'Close' : 'Menu';
+      nav.classList.toggle('is-open', open);
+    };
+
+    toggle.addEventListener('click', () => setOpen(toggle.getAttribute('aria-expanded') !== 'true'));
+    nav.addEventListener('click', event => {
+      if ((event.target as Element).closest('a')) setOpen(false);
+    });
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') {
+        setOpen(false);
+        toggle.focus();
+      }
+    });
+    document.addEventListener('pointerdown', event => {
+      if (event.target instanceof Node && !header.contains(event.target)) setOpen(false);
+    });
+    const wide = window.matchMedia('(min-width: 861px)');
+    wide.addEventListener('change', event => { if (event.matches) setOpen(false); });
+  }
+</script>

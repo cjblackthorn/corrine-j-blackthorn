@@ -2,6 +2,7 @@
 import MainLayout from '../layouts/MainLayout.astro';
 import { links } from '../data/links';
 import { assets } from '../data/assets';
+import OptimizedImage from '../components/OptimizedImage.astro';
 ---
 <MainLayout
   title="Music | Corrine J Blackthorn"
@@ -21,7 +22,7 @@ import { assets } from '../data/assets';
           <a class="button" href={links.music.youtube}>YouTube</a>
         </div>
       </div>
-      <div class="image-frame"><img src={assets.brandImages.glassAndThorns} alt="Glass & Thorns branding" loading="lazy" /></div>
+      <div class="image-frame"><OptimizedImage source={assets.brandImages.glassAndThorns} alt="Glass & Thorns artist project branding" sizes="(max-width: 860px) 100vw, 45vw" loading="lazy" /></div>
     </div>
   </section>
 

@@ -1,0 +1,49 @@
+---
+import manifest from '../data/generated-image-info.json';
+
+type Variant = { width: number; src: string };
+type ImageInfo = { width: number; height: number; variants: Variant[] };
+type Props = {
+  source: string;
+  alt: string;
+  sizes?: string;
+  loading?: 'eager' | 'lazy';
+  fetchpriority?: 'high' | 'low' | 'auto';
+  className?: string;
+};
+
+const { source, alt, sizes = '100vw', loading = 'lazy', fetchpriority = 'auto', className } = Astro.props;
+const info = (manifest as Record<string, ImageInfo>)[source];
+if (!info || !info.variants.length) {
+  throw new Error('Missing optimized image manifest entry: ' + source);
+}
+const src = info.variants[info.variants.length - 1].src;
+const srcset = info.variants.map(variant => `${variant.src} ${variant.width}w`).join(', ');
+---
+{alt === '' ? (
+  <img
+    src={src}
+    srcset={srcset}
+    sizes={sizes}
+    width={info.width}
+    height={info.height}
+    alt=""
+    loading={loading}
+    decoding="async"
+    fetchpriority={fetchpriority}
+    class={className}
+  />
+) : (
+  <img
+    src={src}
+    srcset={srcset}
+    sizes={sizes}
+    width={info.width}
+    height={info.height}
+    alt={alt}
+    loading={loading}
+    decoding="async"
+    fetchpriority={fetchpriority}
+    class={className}
+  />
+)}

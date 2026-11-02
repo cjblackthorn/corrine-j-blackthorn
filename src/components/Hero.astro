@@ -1,10 +1,12 @@
 ---
+import OptimizedImage from './OptimizedImage.astro';
 const title = Astro.props.title ?? 'Corrine J Blackthorn';
 const kicker = Astro.props.kicker ?? 'Technologist • Creator • Advocate';
 const description = Astro.props.description ?? 'Helping people feel seen, inspired, and curious through technology, creativity, and community.';
-const image = Astro.props.image ?? '/images/hero/lake-sunset.jpg';
+const image = Astro.props.image ?? '/images/hero/14B37D30-1B9B-448A-B870-AE49F651F659.png';
 ---
-<section class="hero" style={`--hero-image: url(${image})`}>
+<section class="hero">
+  <OptimizedImage source={image} alt="" sizes="100vw" loading="eager" fetchpriority="high" className="hero-background" />
   <div class="hero-content">
     <span class="kicker">{kicker}</span>
     <h1>{title}</h1>

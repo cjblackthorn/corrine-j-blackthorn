@@ -1,6 +1,7 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
 import { assets } from '../data/assets';
+import OptimizedImage from '../components/OptimizedImage.astro';
 ---
 <MainLayout
   title="About | Corrine J Blackthorn"
@@ -8,7 +9,7 @@ import { assets } from '../data/assets';
 >
   <section>
     <div class="container split">
-      <div class="portrait-frame"><img src={assets.portraits[1]} alt="Corrine J Blackthorn portrait" /></div>
+      <div class="portrait-frame"><OptimizedImage source={assets.portraits[1]} alt="Portrait of Corrine J. Blackthorn" sizes="(max-width: 860px) 100vw, 42vw" /></div>
       <div>
         <span class="kicker">My Story</span>
         <h1>Compassion, resilience, and radical honesty.</h1>
@@ -22,7 +23,7 @@ import { assets } from '../data/assets';
 
   <section class="quote-band"><div class="container"><blockquote>Compassion is not weakness. It is courage.</blockquote></div></section>
 
-  <section><div class="container split"><div><span class="kicker">Grandma</span><h2>Compassion was modeled for me.</h2><p>Much of who I am today was shaped by my grandmother. She showed me that strength and kindness are not opposites, and that helping people matters even when nobody is watching.</p><p>Her compassion was practical. It was not just something she believed; it was something she lived. She taught me to notice people, to care about people, and to keep showing up even when life is difficult.</p><p>The values she modeled continue to guide every part of my work and life.</p></div><div class="portrait-frame"><img src={assets.portraits[2]} alt="Corrine J Blackthorn" loading="lazy" /></div></div></section>
+  <section><div class="container split"><div><span class="kicker">Grandma</span><h2>Compassion was modeled for me.</h2><p>Much of who I am today was shaped by my grandmother. She showed me that strength and kindness are not opposites, and that helping people matters even when nobody is watching.</p><p>Her compassion was practical. It was not just something she believed; it was something she lived. She taught me to notice people, to care about people, and to keep showing up even when life is difficult.</p><p>The values she modeled continue to guide every part of my work and life.</p></div><div class="portrait-frame"><OptimizedImage source={assets.portraits[2]} alt="Portrait of Corrine J. Blackthorn" sizes="(max-width: 860px) 100vw, 42vw" loading="lazy" /></div></div></section>
 
   <section><div class="container"><div class="section-heading"><span class="kicker">Identity</span><h2>Radical transparency and honesty.</h2><p>One of the longest journeys I have ever taken was accepting that I am transgender. Living openly required confronting fear, expectation, and old assumptions about who I was supposed to be.</p><p>Transition was not about becoming someone else. It was about finally allowing myself to become who I had always been.</p><p>That honesty changed how I move through the world. It made me more committed to truth, dignity, access, and the idea that people deserve room to become whole.</p></div></div></section>
 
