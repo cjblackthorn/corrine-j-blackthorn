@@ -11,7 +11,7 @@ const metadataFile = path.join(root, 'src', 'data', 'generated-image-info.json')
 
 const groups = [
   { folder: 'hero', files: ['14B37D30-1B9B-448A-B870-AE49F651F659.png'], widths: [640, 1280, 1920] },
-  { folder: 'portraits', files: ['IMG_3197.jpeg', 'IMG_5125.jpeg', 'IMG_5254.jpeg'], widths: [360, 720, 1080] },
+  { folder: 'portraits', files: ['IMG_3197.jpeg', 'IMG_5125.jpeg', 'IMG_5254.jpeg', 'IMG_9716.jpeg'], widths: [360, 720, 1080] },
   { folder: 'branding', files: ['2CB9F118-DB9C-4E73-9BB6-1798198F5A9D.png'], widths: [360, 720, 1080] },
   { folder: 'photography', files: null, widths: [360, 720, 1200] },
 ];
