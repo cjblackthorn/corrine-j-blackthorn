@@ -1,0 +1,50 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import { links } from '../data/links';
+---
+<MainLayout
+  title="Contact | Corrine J Blackthorn"
+  description="Connect with Corrine J. Blackthorn for cybersecurity, identity governance, editorial collaborations, creative projects, and professional inquiries."
+>
+  <section class="contact-page">
+    <div class="container">
+      <div class="section-heading">
+        <span class="kicker">Get in touch</span>
+        <h1>Connect and collaborate.</h1>
+        <p>Whether you're interested in identity governance and cybersecurity, a published essay, or a creative collaboration, I welcome thoughtful professional conversations.</p>
+        <p>Choose the route that best fits your interest. My personal contact details are not published here, and there is no form that collects your information.</p>
+      </div>
+      <div class="grid contact-options">
+        <article class="card">
+          <h2>Cybersecurity and professional work</h2>
+          <p>Identity and access management, governance, architecture, audit readiness, technical writing, and related professional opportunities.</p>
+          <div class="contact-actions">
+            <a class="button dark" href={links.personal.linkedin} target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a>
+            <a class="button" href={links.ventures.techNerd} target="_blank" rel="noopener noreferrer">Explore TechNerd</a>
+          </div>
+        </article>
+        <article class="card">
+          <h2>Writing and editorial inquiries</h2>
+          <p>Interested in publishing an existing essay, commissioning a piece, or developing an article together? Explore my published work and reach out through my professional profile.</p>
+          <div class="contact-actions">
+            <a class="button dark" href={links.ventures.blackthornFieldNotes} target="_blank" rel="noopener noreferrer">Read Blackthorn Field Notes</a>
+            <a class="button" href={links.personal.linkedin} target="_blank" rel="noopener noreferrer">Editorial collaboration</a>
+          </div>
+        </article>
+        <article class="card">
+          <h2>Creative work and connections</h2>
+          <p>Explore photography, music, and other projects. For a collaboration or professional introduction, start with LinkedIn.</p>
+          <div class="contact-actions">
+            <a class="button dark" href="/photography/">Photography</a>
+            <a class="button" href="/music/">Music</a>
+            <a class="button" href={links.personal.linkedin} target="_blank" rel="noopener noreferrer">Get in touch</a>
+          </div>
+        </article>
+      </div>
+      <aside class="contact-privacy" aria-label="Privacy and contact information">
+        <h2>A note about privacy</h2>
+        <p>This page does not use a contact form, ask you to submit personal information to this website, or publish a private email address. Choosing an external link takes you to another service with its own privacy practices.</p>
+      </aside>
+    </div>
+  </section>
+</MainLayout>

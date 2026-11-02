@@ -1,10 +1,11 @@
 {
   "scripts": {
     "dev": "node scripts/optimize-site-images.mjs && astro dev",
-    "build": "node scripts/optimize-site-images.mjs && astro build && node scripts/render-brand-assets.mjs && node scripts/check-media.mjs",
+    "build": "node scripts/optimize-site-images.mjs && astro build && node scripts/render-brand-assets.mjs && node scripts/check-media.mjs && node scripts/check-r4.mjs",
     "preview": "astro preview",
     "watermark": "node tools/watermark-images.mjs",
-    "check:media": "node scripts/check-media.mjs"
+    "check:media": "node scripts/check-media.mjs",
+    "check:r4": "node scripts/check-r4.mjs"
   },
   "dependencies": {
     "@astrojs/mdx": "8.1.1",
