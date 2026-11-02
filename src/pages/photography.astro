@@ -1,7 +1,6 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
 import { assets } from '../data/assets';
-import { links } from '../data/links';
 import OptimizedImage from '../components/OptimizedImage.astro';
 import { describePhotograph } from '../data/gallery';
 ---
@@ -12,21 +11,15 @@ import { describePhotograph } from '../data/gallery';
   <section>
     <div class="container">
       <div class="section-heading">
-        <span class="kicker">Petal & Frame</span>
+        <span class="kicker">Personal photography portfolio</span>
         <h1>Photography</h1>
         <p>Photography helps me slow down and notice the beauty hidden in ordinary moments.</p>
         <p>I photograph quiet moments, changing light, nature, food, people, and the details that often pass by unnoticed.</p>
-        <p><a class="button" href={links.ventures.petalAndFrame}>Visit Petal & Frame</a></p>
       </div>
       <div class="gallery">
         {assets.photography.map((src) => (
           <figure>
-            <OptimizedImage
-              source={src}
-              alt={describePhotograph(src).alt}
-              sizes="(max-width: 860px) 100vw, 50vw"
-              loading="lazy"
-            />
+            <OptimizedImage source={src} alt={describePhotograph(src).alt} sizes="(max-width: 860px) 100vw, 50vw" loading="lazy" />
             {describePhotograph(src).caption && <figcaption>{describePhotograph(src).caption}</figcaption>}
           </figure>
         ))}

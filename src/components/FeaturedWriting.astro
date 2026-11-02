@@ -1,0 +1,19 @@
+---
+import { featuredWriting } from '../data/featured-writing';
+interface Props { limit?: number; }
+const { limit = featuredWriting.length } = Astro.props;
+const articles = featuredWriting.slice(0, limit);
+---
+<div class="featured-writing-grid">
+  {articles.map((article) => (
+    <article class="card feature-card">
+      <div class="feature-meta">
+        <span class="feature-category">{article.category}</span>
+        <time datetime={article.datetime}>{article.date}</time>
+      </div>
+      <h3>{article.title}</h3>
+      <p>{article.summary}</p>
+      <a class="feature-link" href={article.href} target="_blank" rel="noopener noreferrer" aria-label={`Read ${article.title} on Blackthorn Field Notes`}>Read the essay <span aria-hidden="true">↗</span></a>
+    </article>
+  ))}
+</div>

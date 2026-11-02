@@ -1,46 +1,34 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
+import '../styles/r3.css';
+import FeaturedWriting from '../components/FeaturedWriting.astro';
 import { links } from '../data/links';
 ---
 <MainLayout
   title="Writing | Corrine J Blackthorn"
   description="Discover essays, technical writing, advocacy, personal reflections, and publications by Corrine J. Blackthorn."
 >
-<section>
-<div class="container">
-<div class="section-heading">
-<span class="kicker">Writing</span>
-<h1>Writing is how I make sense of the world.</h1>
-<p>I write to help people see, understand, question, connect, and feel less alone. Sometimes that takes the form of essays, memoir, technical writing, and sometimes stories.</p>
-</div>
-<div class="grid">
-<article class="card"><h3>All of Me</h3><p>A memoir in progress about identity, survival, resilience, honesty, and becoming whole.</p><a class="button" href={links.ventures.blackthornFieldNotes}>Updates</a></article>
-<article class="card"><h3>Blackthorn Field Notes</h3><p>Essays, reflections, technical notes, advocacy writing, observations, and long-form work.</p><a class="button" href={links.ventures.blackthornFieldNotes}>Visit</a></article>
-<article class="card"><h3>KDP Publications</h3><p>Current and future books will be listed here as they are published.</p></article>
-</div>
-</div>
-</section>
-<section class="quote-band"><div class="container"><blockquote>I write what people need to see and understand.</blockquote></div></section>
-<section>
-<div class="container">
-<div class="section-heading">
-<span class="kicker">Current Projects</span>
-<h2>What I'm actively working on.</h2>
-</div>
-<div class="grid">
-<article class="card"><h3>All of Me</h3><p>A memoir exploring identity, transition, resilience, trauma, growth, and becoming whole.</p></article>
-<article class="card"><h3>Field Notes</h3><p>Personal essays, technology writing, advocacy, observations, and lessons learned.</p></article>
-<article class="card"><h3>Future Books</h3><p>Additional nonfiction, technical writing, and creative works planned for publication.</p></article>
-</div>
-</div>
-</section>
-<section>
-<div class="container">
-<div class="section-heading">
-<span class="kicker">Influences</span>
-<h2>Writers who shaped me.</h2>
-<p>Chuck Palahniuk, Janet Evanovich, Kevin Mitnick, and Dan Brown each influenced different aspects of how I think about storytelling, pacing, curiosity, and communication.</p>
-</div>
-</div>
-</section>
+  <section class="content-section"><div class="container">
+    <div class="section-heading">
+      <span class="kicker">Selected writing</span>
+      <h1>Stories that ask us to look more closely.</h1>
+      <p>I write about technology, identity, advocacy, relationships, resilience, and the systems that shape our lives. Some pieces begin with lived experience. Others begin with a technical question or an institutional failure. The connection is a desire to understand what is happening, why it matters, and what should change.</p>
+      <p>These are published essays from Blackthorn Field Notes. They reflect different aspects of my work and voice, from personal reflection to technology and social systems.</p>
+    </div>
+    <FeaturedWriting />
+    <div class="section-actions"><a class="button dark" href={links.ventures.blackthornFieldNotes} target="_blank" rel="noopener noreferrer">Explore Blackthorn Field Notes</a></div>
+  </div></section>
+  <section class="quote-band"><div class="container"><blockquote>Writing is another form of making the invisible visible.</blockquote></div></section>
+  <section class="content-section"><div class="container">
+    <div class="section-heading"><span class="kicker">What I write</span><h2>Several subjects, one way of thinking.</h2><p>Personal storytelling and technical analysis may seem far apart, but both begin by seeing the system surrounding a person.</p></div>
+    <div class="grid">
+      <article class="card compact-card"><h3>Technology and systems</h3><p>Cybersecurity, identity governance, AI ethics, practical engineering, and the human consequences of technical choices.</p></article>
+      <article class="card compact-card"><h3>Advocacy and social systems</h3><p>Disability, access, equality, the cost of bureaucracy, and accountability where institutions fail people.</p></article>
+      <article class="card compact-card"><h3>Personal essays</h3><p>Identity, survival, relationships, resilience, and the ongoing work of becoming ourselves.</p></article>
+    </div>
+  </div></section>
+  <section class="content-section section-soft"><div class="container split">
+    <div><span class="kicker">Books and long-form work</span><h2>All of Me</h2><p>My memoir is a work in progress. It explores identity, transition, survival, resilience, and the process of becoming whole. It is not yet being offered as a published book.</p><p>Additional technical and creative writing may follow. I will share specific titles and availability when there is something ready to announce.</p></div>
+    <article class="card compact-card"><h3>Editorial collaboration</h3><p>I am interested in conversations with publications working in cybersecurity, technology, advocacy, equality, and thoughtful personal writing. Editors may consider an existing essay or collaborate with me on a publication-specific piece.</p><a class="button" href={links.personal.linkedin} target="_blank" rel="noopener noreferrer">Connect professionally</a></article>
+  </div></section>
 </MainLayout>

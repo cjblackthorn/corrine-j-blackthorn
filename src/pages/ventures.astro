@@ -1,32 +1,30 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
+import '../styles/r3.css';
 import { ventureCards, links } from '../data/links';
 ---
 <MainLayout
   title="Ventures | Corrine J Blackthorn"
   description="Explore the organizations, creative projects, and professional ventures connected to Corrine J. Blackthorn."
 >
-  <section>
-    <div class="container">
-      <div class="section-heading">
-        <span class="kicker">Blackthorn Ecosystem</span>
-        <h1>Ventures</h1>
-        <p>Different doors into connected work: technology, photography, music, writing, coaching, plants, and community-centered support.</p>
-      </div>
-      <div class="link-list">
-        {ventureCards.map((venture) => <a class="link-card" href={venture.href}><h3>{venture.title}</h3><p>{venture.description}</p></a>)}
-      </div>
+  <section class="content-section"><div class="container">
+    <div class="section-heading">
+      <span class="kicker">Connected work</span>
+      <h1>Ventures and creative homes.</h1>
+      <p>These selected destinations represent the current public-facing writing, technical, music, and broader business portfolio. A listing here identifies a project or destination, not a promise that every product or service is currently available.</p>
     </div>
-  </section>
-  <section class="quote-band"><div class="container"><blockquote>Community-centered support and success through technology, creativity, and advocacy.</blockquote></div></section>
-  <section>
-    <div class="container">
-      <div class="section-heading"><span class="kicker">Professional Links</span><h2>Connect with the work.</h2></div>
-      <div class="grid">
-        <article class="card"><h3>Corrine on LinkedIn</h3><p>Professional background, technology work, and public updates.</p><a class="button" href={links.personal.linkedin}>LinkedIn</a></article>
-        <article class="card"><h3>TechNerd LinkedIn</h3><p>Technology consulting and company presence.</p><a class="button" href={links.linkedin.techNerd}>TechNerd</a></article>
-        <article class="card"><h3>Thorns to Roses</h3><p>Coaching, growth, and transformation work.</p><a class="button" href={links.linkedin.thornsToRoses}>LinkedIn</a></article>
-      </div>
+    <div class="link-list">
+      {ventureCards.map(venture => (
+        <a class="link-card" href={venture.href} target="_blank" rel="noopener noreferrer">
+          <span class="feature-category">{venture.category}</span>
+          <h2>{venture.title}</h2>
+          <p>{venture.description}</p>
+        </a>
+      ))}
     </div>
-  </section>
+  </div></section>
+  <section class="content-section section-soft"><div class="container">
+    <div class="section-heading"><span class="kicker">Professional connections</span><h2>Explore the people and ideas behind the work.</h2><p>For career opportunities, cybersecurity collaboration, or editorial inquiries, the best starting point is my professional profile. A dedicated contact page is planned separately.</p></div>
+    <div class="section-actions"><a class="button dark" href={links.personal.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a><a class="button" href={links.personal.github} target="_blank" rel="noopener noreferrer">GitHub</a><a class="button" href="/projects/">Selected projects</a></div>
+  </div></section>
 </MainLayout>
