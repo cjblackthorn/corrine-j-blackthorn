@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Corrine J. Blackthorn</title>
+  <desc id="desc">A plum and cream social card for a cybersecurity professional, writer, creator, and advocate.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2d1d31"/>
+      <stop offset="1" stop-color="#141116"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="1" cy="0" r="1">
+      <stop offset="0" stop-color="#5b3b56" stop-opacity=".70"/>
+      <stop offset="1" stop-color="#5b3b56" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#background)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <path d="M848-30c99 120 102 251 15 385S775 563 860 670" fill="none" stroke="#cda6a1" opacity=".18" stroke-width="4"/>
+  <path d="M967-30c99 120 102 251 15 385S894 563 979 670" fill="none" stroke="#d7b36a" opacity=".15" stroke-width="2"/>
+  <rect x="68" y="70" width="1064" height="490" rx="16" fill="none" stroke="#cda6a1" opacity=".40" stroke-width="2"/>
+  <text x="110" y="141" fill="#d7b36a" font-family="Arial, Liberation Sans, sans-serif" font-size="19" font-weight="700" letter-spacing="5">PERSONAL &amp; PROFESSIONAL</text>
+  <text x="106" y="290" fill="#fffaf4" font-family="Georgia, DejaVu Serif, serif" font-size="78">Corrine J.</text>
+  <text x="106" y="386" fill="#fffaf4" font-family="Georgia, DejaVu Serif, serif" font-size="92">Blackthorn</text>
+  <path d="M110 425h510" stroke="#d7b36a" stroke-width="3" opacity=".85"/>
+  <text x="110" y="482" fill="#f7f3ee" font-family="Arial, Liberation Sans, sans-serif" font-size="25">Cybersecurity  ·  Writing  ·  Creativity  ·  Advocacy</text>
+  <text x="110" y="540" fill="#d7b36a" font-family="Arial, Liberation Sans, sans-serif" font-size="19" letter-spacing="2">corrinejblackthorn.com</text>
+</svg>

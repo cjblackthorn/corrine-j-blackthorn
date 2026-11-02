@@ -5,9 +5,10 @@
   --paper: #fffaf4;
   --charcoal: #222222;
   --ink: #141116;
-  --muted: #746b73;
+  --muted: #5e545c;
   --rose: #cda6a1;
   --plum: #5b3b56;
+  --accent-on-light: #5b3b56;
   --deep-plum: #2d1d31;
   --gold: #d7b36a;
   --green: #64705b;
@@ -185,6 +186,11 @@ p { line-height: 1.75; }
   letter-spacing: 0.22em;
   font-size: 0.76rem;
   font-weight: 800;
+  color: var(--accent-on-light);
+}
+
+/* Gold is reserved for dark sections where its text contrast is sufficient. */
+.hero .kicker, .quote-band .kicker {
   color: var(--gold);
 }
 

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">Corrine J. Blackthorn monogram</title>
+  <rect width="64" height="64" rx="14" fill="#2d1d31"/>
+  <path d="M45 19c-4-4.5-8.5-6-14-6-11 0-18 8.5-18 19s7 19 18 19c5.5 0 10-1.5 14-6" fill="none" stroke="#fffaf4" stroke-width="6" stroke-linecap="round"/>
+  <path d="M40 12l5 7 9-1-6 7M40 52l5-7 9 1-6-7" fill="none" stroke="#d7b36a" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
