@@ -1,0 +1,6 @@
+node_modules/
+dist/
+.astro/
+.DS_Store
+public/images/optimized/
+src/data/generated-image-info.json
