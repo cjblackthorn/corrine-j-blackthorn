@@ -20,15 +20,30 @@ if (!info || !info.variants.length) {
 const src = info.variants[info.variants.length - 1].src;
 const srcset = info.variants.map(variant => `${variant.src} ${variant.width}w`).join(', ');
 ---
-<img
-  src={src}
-  srcset={srcset}
-  sizes={sizes}
-  width={info.width}
-  height={info.height}
-  alt={alt}
-  loading={loading}
-  decoding="async"
-  fetchpriority={fetchpriority}
-  class={className}
-/>
+{alt === '' ? (
+  <img
+    src={src}
+    srcset={srcset}
+    sizes={sizes}
+    width={info.width}
+    height={info.height}
+    alt=""
+    loading={loading}
+    decoding="async"
+    fetchpriority={fetchpriority}
+    class={className}
+  />
+) : (
+  <img
+    src={src}
+    srcset={srcset}
+    sizes={sizes}
+    width={info.width}
+    height={info.height}
+    alt={alt}
+    loading={loading}
+    decoding="async"
+    fetchpriority={fetchpriority}
+    class={className}
+  />
+)}
