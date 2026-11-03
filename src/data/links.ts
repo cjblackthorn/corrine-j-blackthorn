@@ -22,40 +22,21 @@ export const links = {
     appleMusic: 'https://music.apple.com/us/artist/glass-thorns/6779036792',
     youtube: 'https://youtube.com/@glassandthorns?si=vy6n2fXKPWR4KDU8',
   },
-  publishing: {
-    kdp: '',
-  },
+  publishing: { kdp: '' },
 } as const;
 
+// Single public collection. Only selected destinations are shown here.
+// Unconfirmed ventures stay available in the links object for owner review.
 export const ventureCards = [
-  {
-    title: 'Blackthorn Enterprises',
-    description: 'The umbrella for Corrine’s business ventures, community-centered work, and evolving ecosystem.',
-    href: links.ventures.blackthornEnterprises,
-  },
-  {
-    title: 'Petal & Frame Photography',
-    description: 'Photography focused on quiet moments, changing light, nature, food, people, and visual storytelling.',
-    href: links.ventures.petalAndFrame,
-  },
-  {
-    title: 'Glass & Thorns',
-    description: 'Music, art, and creative expression — including the artist project behind My Body Isn’t Home Anymore.',
-    href: links.ventures.glassAndThorns,
-  },
-  {
-    title: 'Blackthorn Field Notes',
-    description: 'Essays, observations, memoir updates, technical reflections, and long-form writing.',
-    href: links.ventures.blackthornFieldNotes,
-  },
-  {
-    title: 'TechNerd',
-    description: 'Technology, information security, infrastructure, experimentation, and practical technical knowledge.',
-    href: links.ventures.techNerd,
-  },
-  {
-    title: 'Thorns to Roses Coaching',
-    description: 'Coaching, transformation, support, and advocacy-centered growth work.',
-    href: links.ventures.thornsToRoses,
-  },
-];
+  { title: 'Blackthorn Field Notes', category: 'Published writing', description: 'Essays, observations, technical reflections, and advocacy.', href: links.ventures.blackthornFieldNotes },
+  { title: 'TechNerd', category: 'Professional practice', description: 'Cybersecurity, identity governance, consulting, and technical systems.', href: links.ventures.techNerd },
+  { title: 'Glass & Thorns', category: 'Music and creative work', description: 'Original music and creative expression about identity and resilience.', href: links.ventures.glassAndThorns },
+  { title: 'Blackthorn Enterprises', category: 'Business portfolio', description: 'The wider home for connected creative and technical projects.', href: links.ventures.blackthornEnterprises },
+] as const;
+
+export const selectedProjects = [
+  { title: 'All of Me', status: 'In progress', description: 'A memoir about identity, resilience, honesty, and becoming whole.', href: '/writing/' },
+  { title: 'Photography', status: 'Portfolio', description: 'Nature, changing light, textures, and the overlooked details of ordinary life.', href: '/photography/' },
+  { title: 'Blackthorn Field Notes', status: 'Published essays', description: 'Independent writing about personal experiences, technology, disability, and advocacy.', href: links.ventures.blackthornFieldNotes },
+  { title: 'Glass & Thorns', status: 'Music released', description: 'Music and artistic expression, including an initial public release.', href: '/music/' },
+] as const;
