@@ -1,5 +1,6 @@
 export const assets = {
   hero: '/images/hero/14B37D30-1B9B-448A-B870-AE49F651F659.png',
+  homepagePortrait: '/images/portraits/BC2916E9-84E3-4AF0-A9B4-E84B469973D0.png',
   portraits: [
     '/images/portraits/IMG_3197.jpeg',
     '/images/portraits/IMG_5125.jpeg',
