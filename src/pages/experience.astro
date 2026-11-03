@@ -1,225 +1,57 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
+import '../styles/r3.css';
 import { links } from '../data/links';
-
+import { careerProgression, impactCases, specialties } from '../data/portfolio';
 const resumeHref = '/resume/Corrine-J-Blackthorn-Resume.pdf';
-
-const focusAreas = [
-  {
-    title: 'Identity & Access',
-    description: 'IAM, governance, lifecycle management, access strategy, and helping organizations understand who has access to what and why.',
-  },
-  {
-    title: 'Security & Risk',
-    description: 'Practical security thinking, risk reduction, awareness, documentation, and translating security needs into usable everyday practices.',
-  },
-  {
-    title: 'Systems & Operations',
-    description: 'Infrastructure, automation, cloud platforms, support workflows, operational clarity, and sustainable technical foundations.',
-  },
-];
-
-const impactHighlights = [
-  {
-    title: 'External AD Cleanup',
-    description: 'Cleaned up more than 10,000 dormant external Active Directory accounts, reducing stale access and improving the health of identity data.',
-  },
-  {
-    title: 'SailPoint IIQ License True-Up',
-    description: 'Created a streamlined license true-up reporting process for SailPoint IIQ, helping reduce runtime and make licensing work easier to repeat.',
-  },
-  {
-    title: 'Privileged Access Protection',
-    description: 'Demonstrated the need for separate Privileged Access Workstations to protect administrator-level account access and reduce catastrophic threat exposure.',
-  },
-  {
-    title: 'Audit Liaison Work',
-    description: 'Helped connect audit needs with technical teams, translating evidence requests, control context, and security process details into clearer action.',
-  },
-];
-
-const workingStyle = [
-  'I care about the human experience of technical systems.',
-  'I like making messy processes clearer, safer, and easier to maintain.',
-  'I bring curiosity, patience, direct communication, and care to cross-functional work.',
-  'I value access, inclusion, documentation, and systems that help people succeed.',
-];
-
-const teamSupport = [
-  'Clarify complicated identity and security systems.',
-  'Improve access governance and review workflows.',
-  'Translate security requirements into usable practice.',
-  'Document decisions, evidence, and repeatable processes.',
-  'Support teams through change with patience and context.',
-  'Connect audit, risk, operations, and engineering needs.',
-];
-
-const tools = ['SailPoint IIQ', 'Azure AD', 'ServiceNow', 'PowerShell', 'Jira', 'AWS', 'Microsoft 365'];
-
-const roleFit = [
-  'IAM Governance',
-  'Security Analyst',
-  'GRC',
-  'Security Operations',
-  'Access governance process improvement',
-  'Remote-first security and identity work',
-];
 ---
 <MainLayout
   title="Experience | Corrine J Blackthorn"
   description="Review Corrine J. Blackthorn's professional background, cybersecurity achievements, identity governance expertise, and resume."
 >
-  <section>
+  <section class="content-section">
     <div class="container split">
       <div>
-        <span class="kicker">Experience</span>
-        <h1>Professional background, as part of the whole person.</h1>
-        <p>My professional life sits alongside my creative, advocacy, and community-centered work. Technology is one of the ways I help people feel safer, clearer, more capable, and more supported.</p>
-        <p>This page gives prospective employers and collaborators a more complete picture than a traditional resume can hold, while keeping the formal resume easy to download when someone needs the concise version.</p>
-        <div class="hero-actions">
+        <span class="kicker">Professional experience</span>
+        <h1>Identity governance, security, and systems thinking.</h1>
+        <p>My career spans more than two decades in information technology, including identity and access engineering, governance, security, technical operations, and audit support. My approach combines architectural thinking with an understanding of how controls work in day-to-day operations.</p>
+        <p>The examples here demonstrate the kinds of problems I solve. The downloadable resume provides the more formal employment history.</p>
+        <div class="section-actions">
           <a class="button dark" href={resumeHref} download>Download resume</a>
           <a class="button" href={links.personal.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>
           <a class="button" href={links.personal.github} target="_blank" rel="noopener noreferrer">GitHub</a>
         </div>
       </div>
-      <article class="card">
-        <h2>Resume Preview</h2>
-        <p>Senior information security professional with 20+ years in IT, including IAM governance, GRC, security operations, reporting, automation, and user-centered technical work.</p>
-        <p>I am most aligned with IAM Governance, Security Analyst, and GRC roles, with a strong preference for remote work and openness to consulting, contract, full-time, or part-time opportunities.</p>
+      <article class="card compact-card">
+        <span class="kicker">Areas of impact</span>
+        <h2>Access, accountability, and clarity.</h2>
+        <p>My most meaningful work is often at the intersection of identity lifecycle, security controls, governance processes, and organizational change.</p>
+        <p>I am especially interested in roles or collaborations where technical architecture and the quality of decisions matter equally.</p>
       </article>
     </div>
   </section>
-
-  <section class="quote-band">
+  <section class="content-section section-soft">
     <div class="container">
-      <blockquote>A resume can list the work. Experience shows how the work connects.</blockquote>
+      <div class="section-heading"><span class="kicker">Career progression</span><h2>From operating systems to governing access.</h2><p>A thematic progression through the work. Refer to the resume for dates, employers, and full role history.</p></div>
+      <ol class="career-timeline">
+        {careerProgression.map(item => <li><span class="feature-category">{item.stage}</span><h3>{item.title}</h3><p>{item.description}</p></li>)}
+      </ol>
     </div>
   </section>
-
-  <section>
+  <section class="content-section">
     <div class="container">
-      <div class="section-heading">
-        <span class="kicker">Selected Impact</span>
-        <h2>Work that made systems cleaner, safer, and easier to trust.</h2>
-        <p>These examples show the kind of practical security and identity work I am proud of: not only identifying risk, but improving the systems and processes around it.</p>
-      </div>
+      <div class="section-heading"><span class="kicker">Selected achievements</span><h2>Work backed by outcomes.</h2><p>These examples are limited to general and previously public descriptions. They are not disclosures of client or employer systems.</p></div>
       <div class="grid">
-        {impactHighlights.map((item) => (
-          <article class="card">
-            <h3>{item.title}</h3>
-            <p>{item.description}</p>
-          </article>
-        ))}
+        {impactCases.map(item => <article class="card compact-card"><h3>{item.title}</h3><p>{item.result}</p><a class="feature-link" href="/technology/">Explore the approach</a></article>)}
       </div>
     </div>
   </section>
-
-  <section>
+  <section class="content-section section-soft">
     <div class="container">
-      <div class="section-heading">
-        <span class="kicker">What I Bring</span>
-        <h2>Technical work with a human center.</h2>
-        <p>These are the professional areas that connect most directly to my technology background and the way I like to contribute.</p>
-      </div>
-      <div class="grid">
-        {focusAreas.map((area) => (
-          <article class="card">
-            <h3>{area.title}</h3>
-            <p>{area.description}</p>
-          </article>
-        ))}
-      </div>
+      <div class="section-heading"><span class="kicker">Expertise</span><h2>The disciplines I connect.</h2><p>Clear controls depend on both deep technical knowledge and an understanding of organizational goals.</p></div>
+      <div class="grid">{specialties.map(area => <article class="card compact-card"><h3>{area.title}</h3><p>{area.description}</p></article>)}</div>
+      <div class="section-actions"><a class="button dark" href={resumeHref} download>Download full resume</a><a class="button" href={links.personal.linkedin} target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a></div>
     </div>
   </section>
-
-  <section>
-    <div class="container split">
-      <div>
-        <span class="kicker">How I Work</span>
-        <h2>Clarity, care, and follow-through.</h2>
-        <p>I am drawn to work where the technical details matter, but so do the people living with the results. That includes building better processes, improving access, reducing confusion, and helping teams understand the systems they rely on.</p>
-        <p>My creative and advocacy work are not separate from that. They shape how I listen, document, communicate, and build.</p>
-      </div>
-      <div class="link-list">
-        {workingStyle.map((item) => (
-          <div class="link-card">
-            <p>{item}</p>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="container">
-      <div class="section-heading">
-        <span class="kicker">How I Help Teams</span>
-        <h2>Turning security complexity into practical movement.</h2>
-        <p>I am useful in the spaces where access, audit, operations, and people overlap. I like making the work clearer so teams can act with more confidence.</p>
-      </div>
-      <div class="link-list">
-        {teamSupport.map((item) => (
-          <div class="link-card">
-            <p>{item}</p>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="container split">
-      <div>
-        <span class="kicker">Looking For</span>
-        <h2>Security and identity work where governance matters.</h2>
-        <p>I am most interested in work where identity, security, governance, systems thinking, documentation, and care for users all matter.</p>
-        <p>I am open to consulting, contract, full-time, and part-time roles, with a strong preference for remote work.</p>
-      </div>
-      <div class="link-list">
-        {roleFit.map((item) => (
-          <div class="link-card">
-            <p>{item}</p>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="container">
-      <div class="section-heading">
-        <span class="kicker">Tools & Learning</span>
-        <h2>Platforms I have worked around, and where I am growing next.</h2>
-        <p>My experience includes identity, service management, cloud, automation, collaboration, and security operations environments. I am also actively pursuing deeper governance, identity, and security architecture learning.</p>
-      </div>
-      <div class="grid">
-        <article class="card">
-          <h3>Tools</h3>
-          <p>{tools.join(' | ')}</p>
-        </article>
-        <article class="card">
-          <h3>Learning</h3>
-          <p>Pursuing CISA, CIRM, SC-300, SC-100, and related security, identity, governance, and risk credentials.</p>
-        </article>
-        <article class="card">
-          <h3>Domains</h3>
-          <p>IAM governance, access lifecycle, audit readiness, security operations, GRC, privileged access, documentation, and process improvement.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="container">
-      <div class="section-heading">
-        <span class="kicker">Formal Resume</span>
-        <h2>For employers who need the concise version.</h2>
-        <p>The site gives context; the PDF keeps the standard resume path easy for recruiters, hiring managers, and collaborators.</p>
-      </div>
-      <p>
-        <a class="button dark" href={resumeHref} download>Download resume</a>
-        <a class="button" href={links.personal.linkedin} target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a>
-      </p>
-    </div>
-  </section>
+  <section class="quote-band"><div class="container"><blockquote>The architecture matters. So do the people, the evidence, and the decisions that keep it working.</blockquote></div></section>
 </MainLayout>

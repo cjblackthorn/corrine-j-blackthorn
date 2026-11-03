@@ -1,69 +1,32 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
-import { links } from '../data/links';
+import '../styles/r3.css';
+import { selectedProjects, links } from '../data/links';
 ---
 <MainLayout
   title="Projects | Corrine J Blackthorn"
   description="Discover the active creative, technical, entrepreneurial, and advocacy projects associated with Corrine J. Blackthorn."
 >
-  <section>
-    <div class="container">
-      <div class="section-heading">
-        <span class="kicker">Projects</span>
-        <h1>Things I'm building.</h1>
-        <p>These are the projects, businesses, creative endeavors, and initiatives that make up different parts of my work and interests.</p>
-      </div>
+  <section class="content-section"><div class="container">
+    <div class="section-heading">
+      <span class="kicker">Selected projects</span>
+      <h1>What I'm building, writing, and making.</h1>
+      <p>Some projects are public and growing. Others are still taking shape. Each listing distinguishes published work, ongoing portfolios, and work in progress rather than suggesting everything is already a functioning service.</p>
     </div>
-  </section>
-
-  <section>
-    <div class="container">
-      <div class="section-heading"><span class="kicker">Technology</span><h2>Systems, security, learning, and technical exploration.</h2></div>
-      <div class="grid">
-        <article class="card"><h3>TechNerd</h3><p>Technology consulting, engineering, security, and practical technical solutions.</p><a class="button" href={links.ventures.techNerd}>Visit</a></article>
-        <article class="card"><h3>Rootworks</h3><p>Learning, experimentation, infrastructure, and technical exploration.</p><a class="button" href={links.ventures.rootworks}>Visit</a></article>
-      </div>
+    <div class="grid">
+      {selectedProjects.map(project => (
+        <article class="card project-card">
+          <span class="project-status">{project.status}</span>
+          <h2>{project.title}</h2>
+          <p>{project.description}</p>
+          <a class="feature-link" href={project.href} rel={project.href.startsWith('http') ? 'noopener noreferrer' : undefined} target={project.href.startsWith('http') ? '_blank' : undefined}>Explore this work</a>
+        </article>
+      ))}
     </div>
-  </section>
-
-  <section>
-    <div class="container">
-      <div class="section-heading"><span class="kicker">Writing</span><h2>Stories, essays, field notes, and publications.</h2></div>
-      <div class="grid">
-        <article class="card"><h3>Blackthorn Field Notes</h3><p>Essays, reflections, technical writing, advocacy notes, memoir updates, and long-form work.</p><a class="button" href={links.ventures.blackthornFieldNotes}>Visit</a></article>
-        <article class="card"><h3>KDP Publications</h3><p>Future book releases, including memoir and other published work, will be listed as they become available.</p><a class="button" href="/writing/">Coming Soon</a></article>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="container">
-      <div class="section-heading"><span class="kicker">Music</span><h2>Creative expression through sound.</h2></div>
-      <div class="grid">
-        <article class="card"><h3>Glass & Thorns</h3><p>My artist project for music shaped by identity, transformation, resilience, and creative expression.</p><a class="button" href={links.ventures.glassAndThorns}>Visit</a></article>
-        <article class="card"><h3>Glass Rose Collective</h3><p>A future independent publishing, representation, and artist-support concept. Not live yet.</p><a class="button" href="/projects/">In Development</a></article>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="container">
-      <div class="section-heading"><span class="kicker">Photography & Growth</span><h2>Visual storytelling, plants, and creative practice.</h2></div>
-      <div class="grid">
-        <article class="card"><h3>Petals & Frames</h3><p>Photography, visual storytelling, and creative work.</p><a class="button" href={links.ventures.petalAndFrame}>Visit</a></article>
-        <article class="card"><h3>Blackthorn's Tropicals</h3><p>A growing collection of plants, learning, cultivation, and curiosity.</p><a class="button" href={links.ventures.blackthornsTropicals}>Visit</a></article>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="container">
-      <div class="section-heading"><span class="kicker">Advocacy</span><h2>Support, transformation, and community care.</h2></div>
-      <div class="grid">
-        <article class="card"><h3>Thorns to Roses</h3><p>Advocacy, support, coaching, and helping people move forward.</p><a class="button" href={links.ventures.thornsToRoses}>Visit</a></article>
-      </div>
-    </div>
-  </section>
-
-  <section class="quote-band"><div class="container"><blockquote>Different projects. Shared values. Each one is another way of helping people learn, grow, create, belong, or succeed.</blockquote></div></section>
+  </div></section>
+  <section class="content-section section-soft"><div class="container split">
+    <div><span class="kicker">Technical work</span><h2>Identity governance, security, and systems thinking.</h2><p>My professional work includes identity and access management, engineering, risk, audit readiness, and the architecture behind maintainable access controls.</p><div class="section-actions"><a class="button dark" href="/technology/">View technical portfolio</a><a class="button" href={links.ventures.techNerd} target="_blank" rel="noopener noreferrer">TechNerd</a></div></div>
+    <article class="card compact-card"><h3>Future and exploratory projects</h3><p>I prefer not to promote a future idea as an available service. Additional ventures and concepts will be added here after their names, purpose, links, and operating status have been confirmed.</p></article>
+  </div></section>
+  <section class="quote-band"><div class="container"><blockquote>Different projects. Shared values. Each one is another way to learn, create, understand, or connect.</blockquote></div></section>
 </MainLayout>

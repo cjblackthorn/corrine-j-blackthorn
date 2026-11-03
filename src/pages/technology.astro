@@ -1,40 +1,54 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
+import '../styles/r3.css';
 import { links } from '../data/links';
+import { impactCases, specialties } from '../data/portfolio';
 ---
 <MainLayout
   title="Technology | Corrine J Blackthorn"
   description="Explore Corrine J. Blackthorn's work in cybersecurity, identity governance, access management, automation, and security architecture."
 >
-  <section>
+  <section class="content-section">
     <div class="container">
       <div class="section-heading">
-        <span class="kicker">Technology</span>
-        <h1>Technology matters because it affects people.</h1>
-        <p>The systems we build shape opportunities, remove barriers, protect communities, and influence how people experience work, safety, access, and belonging.</p>
-        <p>My work in technology has centered on identity, security, governance, infrastructure, and practical problem solving. The goal is not technology for its own sake. The goal is building systems that help people succeed.</p>
+        <span class="kicker">Cybersecurity and identity governance</span>
+        <h1>Architecture starts with understanding the whole system.</h1>
+        <p>Identity is where people, technology, risk, and accountability meet. I approach identity and access management by understanding the lifecycle of an account, the purpose of an entitlement, the dependencies behind a control, and the people who rely on it.</p>
+        <p>My background spans identity engineering, governance, security, systems operations, automation, and audit readiness. I believe a security program should be measurable and sustainable without becoming unnecessarily difficult to operate.</p>
       </div>
+      <div class="section-actions">
+        <a class="button dark" href="/experience/">Experience and resume</a>
+        <a class="button" href={links.personal.linkedin} target="_blank" rel="noopener noreferrer">Connect professionally</a>
+      </div>
+    </div>
+  </section>
+  <section class="content-section section-soft">
+    <div class="container">
+      <div class="section-heading"><span class="kicker">Specializations</span><h2>Access, governance, systems, and trust.</h2><p>Technical depth matters, but so does connecting the decisions across a larger environment.</p></div>
       <div class="grid">
-        <article class="card"><h3>Identity & Access</h3><p>IAM, governance, lifecycle management, access strategy, and helping organizations understand who has access to what and why.</p></article>
-        <article class="card"><h3>Security</h3><p>Information security, risk reduction, awareness, practical defense, and translating security into something people can actually use.</p></article>
-        <article class="card"><h3>Systems</h3><p>Infrastructure, automation, cloud platforms, operations, and sustainable technical foundations.</p></article>
+        {specialties.map(area => <article class="card compact-card"><h3>{area.title}</h3><p>{area.description}</p></article>)}
       </div>
-      <p style="margin-top: 24px"><a class="button" href={links.personal.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a> <a class="button" href={links.ventures.techNerd}>TechNerd</a> <a class="button dark" href="/experience/">Experience & Resume</a></p>
     </div>
   </section>
-  <section>
-    <div class="container split">
-      <div>
-        <span class="kicker">Professional Background</span>
-        <h2>Professional context lives inside the larger story.</h2>
-        <p>For prospective employers, the Experience page gathers my technical strengths, working style, and resume without turning the whole site into a job application.</p>
-        <a class="button" href="/experience/">View experience</a>
+  <section class="content-section">
+    <div class="container">
+      <div class="section-heading"><span class="kicker">Selected professional work</span><h2>What the work looks like in practice.</h2><p>These public examples focus on the problem, approach, and outcome. They deliberately omit confidential employer and implementation details.</p></div>
+      <div class="case-study-grid">
+        {impactCases.map(item => (
+          <article class="card case-study">
+            <h3>{item.title}</h3>
+            <div><strong>The challenge</strong><p>{item.problem}</p></div>
+            <div><strong>The approach</strong><p>{item.approach}</p></div>
+            <div><strong>The result</strong><p>{item.result}</p></div>
+            <ul class="tag-list" aria-label="Related specialties">{item.tags.map(tag => <li>{tag}</li>)}</ul>
+          </article>
+        ))}
       </div>
-      <article class="card">
-        <h3>What connects the work</h3>
-        <p>Security, identity, infrastructure, documentation, advocacy, and creative problem solving all point toward the same outcome: systems that help people understand, access, and trust the tools they use.</p>
-      </article>
     </div>
   </section>
-  <section class="quote-band"><div class="container"><blockquote>Good technology should make life safer, clearer, more accessible, and more human.</blockquote></div></section>
+  <section class="quote-band"><div class="container"><blockquote>Security should be understandable, evidence-based, and usable by the people responsible for it.</blockquote></div></section>
+  <section class="content-section"><div class="container split">
+    <div><span class="kicker">Technical collaboration</span><h2>Systems thinking without losing the human perspective.</h2><p>I am interested in meaningful challenges in identity governance, cybersecurity architecture, access controls, and the systems that support accountability. I value clear documentation, constructive technical debate, and solutions teams can maintain long after a project ends.</p></div>
+    <article class="card compact-card"><h3>Explore further</h3><p>Learn more about my experience and the work that shaped it, or visit TechNerd for the broader technical practice.</p><div class="section-actions"><a class="button dark" href="/experience/">Professional experience</a><a class="button" href={links.ventures.techNerd} target="_blank" rel="noopener noreferrer">TechNerd</a></div></article>
+  </div></section>
 </MainLayout>

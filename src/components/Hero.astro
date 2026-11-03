@@ -4,6 +4,10 @@ const title = Astro.props.title ?? 'Corrine J Blackthorn';
 const kicker = Astro.props.kicker ?? 'Technologist • Creator • Advocate';
 const description = Astro.props.description ?? 'Helping people feel seen, inspired, and curious through technology, creativity, and community.';
 const image = Astro.props.image ?? '/images/hero/14B37D30-1B9B-448A-B870-AE49F651F659.png';
+const primaryHref = Astro.props.primaryHref ?? '/about/';
+const primaryLabel = Astro.props.primaryLabel ?? 'Start with my story';
+const secondaryHref = Astro.props.secondaryHref ?? '/projects/';
+const secondaryLabel = Astro.props.secondaryLabel ?? 'Explore projects';
 ---
 <section class="hero">
   <OptimizedImage source={image} alt="" sizes="100vw" loading="eager" fetchpriority="high" className="hero-background" />
@@ -12,8 +16,8 @@ const image = Astro.props.image ?? '/images/hero/14B37D30-1B9B-448A-B870-AE49F65
     <h1>{title}</h1>
     <p>{description}</p>
     <div class="hero-actions">
-      <a class="button dark" href="/about/">Start with my story</a>
-      <a class="button" href="/projects/">Explore projects</a>
+      <a class="button dark" href={primaryHref}>{primaryLabel}</a>
+      <a class="button" href={secondaryHref}>{secondaryLabel}</a>
     </div>
   </div>
 </section>
