@@ -8,7 +8,7 @@
     "check:r4": "node scripts/check-r4.mjs"
   },
   "dependencies": {
-    "@astrojs/mdx": "8.1.1",
+    "@astrojs/mdx": "8.1.3",
     "astro": "7.4.4",
     "sharp": "0.35.5"
   },
